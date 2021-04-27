@@ -87,5 +87,8 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
-# Output directory
-build
+# Output
+*.tsbuildinfo
+dist/cjs/*
+dist/esm/
+!dist/cjs/package.json
