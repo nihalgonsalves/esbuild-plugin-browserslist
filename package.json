@@ -13,21 +13,31 @@
       "default": "./dist/esm/index.js"
     }
   },
+  "standard-version": {
+    "scripts": {
+      "postchangelog": "prettier --write CHANGELOG.md"
+    }
+  },
   "scripts": {
     "typecheck": "tsc",
     "build": "tsc --project tsconfig.esm.json && tsc --project tsconfig.cjs.json",
     "test": "jest",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src/",
     "format": "prettier . --write",
-    "format:check": "prettier . --check"
+    "format:check": "prettier . --check",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
     "@nihalgonsalves/esconfig": "^0.0.8",
     "@types/jest": "^26.0.23",
     "@types/node": "<15",
     "eslint": "^7.25.0",
+    "husky": "^6.0.0",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
+    "standard-version": "^9.2.0",
     "ts-jest": "^26.5.5",
     "typescript": "^4.2.4"
   }
