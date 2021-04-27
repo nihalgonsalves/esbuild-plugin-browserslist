@@ -1,8 +1,7 @@
 {
   "extends": "@nihalgonsalves/esconfig",
   "compilerOptions": {
-    "outDir": "./dist/esm/",
-    "rootDir": "./src/"
+    "noEmit": true
   },
   "include": ["./src/"]
 }

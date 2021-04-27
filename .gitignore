@@ -88,7 +88,6 @@ typings/
 .dynamodb/
 
 # Output
-*.tsbuildinfo
 dist/cjs/*
-dist/esm/
+dist/esm/*
 !dist/cjs/package.json

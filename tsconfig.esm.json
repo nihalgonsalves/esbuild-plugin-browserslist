@@ -1,9 +1,9 @@
 {
-  "extends": "./tsconfig.json",
+  "extends": "@nihalgonsalves/esconfig",
   "compilerOptions": {
     "noEmit": false,
-    "module": "commonjs",
-    "outDir": "./dist/cjs/"
+    "module": "esnext",
+    "outDir": "./dist/esm/"
   },
   "exclude": ["node_modules", "*.spec.ts"]
 }
