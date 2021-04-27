@@ -1,0 +1,8 @@
+{
+  "extends": "@nihalgonsalves/esconfig",
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "./build",
+    "rootDir": "./src"
+  }
+}
