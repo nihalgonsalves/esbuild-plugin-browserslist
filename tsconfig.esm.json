@@ -5,5 +5,5 @@
     "module": "esnext",
     "outDir": "./dist/esm/"
   },
-  "exclude": ["node_modules", "*.spec.ts"]
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }

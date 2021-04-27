@@ -27,12 +27,16 @@
     "format:check": "prettier . --check",
     "prepare": "husky install"
   },
+  "peerDependencies": {
+    "esbuild": "~0.11.15"
+  },
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
     "@nihalgonsalves/esconfig": "^0.0.8",
     "@types/jest": "^26.0.23",
     "@types/node": "<15",
+    "esbuild": "~0.11.15",
     "eslint": "^7.25.0",
     "husky": "^6.0.0",
     "jest": "^26.6.3",

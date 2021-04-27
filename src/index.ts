@@ -1,4 +1,6 @@
-// eslint-disable-next-line no-console
-console.log('🚀');
+import type { Plugin } from 'esbuild';
 
-export const num = 42;
+export const esbuildPluginBrowserslist = (): Plugin => ({
+  name: 'esbuild-plugin-browserslist',
+  setup(_build) {},
+});
