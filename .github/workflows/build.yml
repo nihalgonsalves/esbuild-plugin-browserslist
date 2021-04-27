@@ -1,7 +1,7 @@
 name: build
 on: [push]
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -9,21 +9,19 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
       - run: yarn install --frozen-lockfile
       - run: yarn format:check
       - run: yarn lint
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v1
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
-      - name: Build image
-        uses: docker/build-push-action@v2
-        with:
-          tags: nihalgonsalves/node-typescript-eslint-template:latest
-          load: true
-      - name: Run image
-        run: docker run nihalgonsalves/node-typescript-eslint-template
+      - run: yarn build
