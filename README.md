@@ -2,7 +2,7 @@
 
 ![build status](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/workflows/build/badge.svg)
 
-Configure esbuild's target based on a browserslist query
+Configure [esbuild](https://github.com/evanw/esbuild)'s target based on a [browserslist](https://github.com/browserslist/browserslist) query
 
 ## Installation
 
@@ -58,3 +58,11 @@ await esbuild.build({
 ```
 
 ## Caveats
+
+- Only `edge`, `firefox`, `chrome`, `safari`, `ios_saf`, and `node` have direct equivalents for esbuild targets.
+- `android` and `and_chr` are mapped to the `chrome` target, and `and_ff` is mapped to the `firefox` target.
+- All other browsers are ignored (`and_qq`, `samsung`, `opera`, `op_mini`, `op_mob`, `ie`, `ie_mob`, `bb`, `baidu`, and `kaios`)
+
+## Debugging
+
+You can turn on debug logs (which will print all resolutions or failures) using `DEBUG=esbuild-plugin-browserslist`
