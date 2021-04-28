@@ -1,11 +1,10 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "target": "es2019",
+    "declaration": true,
     "noEmit": false,
     "incremental": false,
-    "module": "esnext",
-    "outDir": "./dist/esm/"
+    "outDir": "./dist/"
   },
   "exclude": ["node_modules", "**/*.spec.ts"]
 }

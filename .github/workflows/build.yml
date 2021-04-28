@@ -27,3 +27,21 @@ jobs:
       - run: yarn typecheck
       - run: yarn build
       - run: yarn test
+
+      - name: test built package
+        run: |
+          mkdir ../foo
+          cd ../foo
+
+          yarn init -y
+          yarn add esbuild-plugin-browserslist@"../esbuild-plugin-browserslist"
+          yarn install
+
+          echo "
+            const { esbuildPluginBrowserslist, resolveToEsbuildTarget } = require('esbuild-plugin-browserslist');
+            const assert = require('assert');
+            
+            assert.strictEqual(esbuildPluginBrowserslist().name, 'esbuild-plugin-browserslist');
+            assert.strictEqual(resolveToEsbuildTarget(['chrome 90'])[0], 'chrome90');
+          " > test.js
+          node test.js

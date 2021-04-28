@@ -4,21 +4,14 @@
   "version": "0.0.1",
   "author": "Nihal Gonsalves <nihal@nihalgonsalves.com>",
   "license": "MIT",
-  "type": "module",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "engines": {
     "node": ">=12.13.0"
   },
   "files": [
     "dist"
   ],
-  "exports": {
-    ".": {
-      "require": "./dist/cjs/index.js",
-      "default": "./dist/esm/index.js"
-    }
-  },
   "standard-version": {
     "scripts": {
       "postchangelog": "prettier --write CHANGELOG.md"
@@ -26,7 +19,7 @@
   },
   "scripts": {
     "typecheck": "tsc",
-    "build": "rm -rf dist && tsc --project tsconfig.esm.json && tsc --project tsconfig.cjs.json && cp package-cjs-template.json ./dist/cjs/package.json",
+    "build": "rm -rf dist && tsc --project tsconfig.build.json",
     "test": "jest",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src/",
     "format": "prettier . --write",
@@ -47,7 +40,7 @@
     "@nihalgonsalves/esconfig": "^0.0.8",
     "@types/debug": "^4.1.5",
     "@types/jest": "^26.0.23",
-    "@types/node": "<15",
+    "@types/node": "14",
     "browserslist": "^4.16.5",
     "esbuild": "~0.11.15",
     "eslint": "^7.25.0",

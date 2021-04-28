@@ -13,25 +13,12 @@ yarn add esbuild-plugin-browserslist esbuild browserslist
 ## Usage
 
 ```ts
-// import/ESM
-
-import * as esbuild from 'esbuild';
-import browserslist from 'browserslist';
-import {
-  esbuildPluginBrowserslist,
-  resolveToEsbuildTarget,
-} from 'esbuild-plugin-browserslist';
-
-// require/CJS
-
 const esbuild = require('esbuild');
 const browserslist = require('browserslist');
 const {
   esbuildPluginBrowserslist,
   resolveToEsbuildTarget,
 } = require('esbuild-plugin-browserslist');
-
-// Usage
 
 await esbuild.build({
   entryPoints: ['./foo/bar.ts'],

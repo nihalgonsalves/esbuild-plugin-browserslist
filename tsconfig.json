@@ -1,6 +1,8 @@
 {
   "extends": "@nihalgonsalves/esconfig",
   "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2019",
     "noEmit": true
   },
   "include": ["./src/"]
