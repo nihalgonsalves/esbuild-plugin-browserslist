@@ -81,4 +81,27 @@ describe('esbuild-plugin-browserslist', () => {
       }),
     );
   });
+
+  it('also logs in the usual way', async () => {
+    const consoleSpy = jest.spyOn(console, 'error');
+
+    const { entryPoint, outfile } = await getFile('');
+    await esbuild.build({
+      entryPoints: [entryPoint],
+      outfile,
+      plugins: [
+        esbuildPluginBrowserslist(['chrome 90', 'op_mob all'], {
+          printUnknownTargets: true,
+        }),
+      ],
+    });
+
+    expect(consoleSpy.mock.calls).toMatchInlineSnapshot(`
+      Array [
+        Array [
+          "[esbuild-plugin-browserslist] Skipping unknown target: entry=op_mob all, browser=op_mob, version=1",
+        ],
+      ]
+    `);
+  });
 });

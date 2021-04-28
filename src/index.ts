@@ -26,9 +26,17 @@ export const esbuildPluginBrowserslist = (
     const esbuildOptions = build.initialOptions;
 
     if (esbuildOptions.target) {
+      dbg(
+        'Got esbuildOptions.target=%s, expected=<falsey>',
+        esbuildOptions.target,
+      );
       throw new Error(`${PLUGIN_NAME} cannot be used with a set target`);
     }
 
-    esbuildOptions.target = resolveToEsbuildTarget(browserlist, opts);
+    const resolvedTargets = resolveToEsbuildTarget(browserlist, opts);
+
+    dbg('Resolved targets: %j', resolvedTargets);
+
+    esbuildOptions.target = resolvedTargets;
   },
 });

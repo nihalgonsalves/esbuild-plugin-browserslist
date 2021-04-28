@@ -11,8 +11,8 @@ const VersionSchema = z.string().regex(/^(\d+\.\d+\.\d+|\d+\.\d+|\d+)$/);
 export const resolveToEsbuildTarget = (
   browserlist: string[],
   logFn: (msg: string) => void,
-): { target: EsbuildEngine; version: string }[] =>
-  browserlist
+): { target: EsbuildEngine; version: string }[] => {
+  const targets = browserlist
     .map((entry) => {
       const [rawBrowser, rawVersionOrRange] = entry.split(' ');
 
@@ -57,3 +57,10 @@ export const resolveToEsbuildTarget = (
       return { target: esbuildTarget, version };
     })
     .filter((x): x is NonNullable<typeof x> => x != null);
+
+  if (targets.length === 0) {
+    throw new Error('Could not resolve any esbuild targets');
+  }
+
+  return targets;
+};

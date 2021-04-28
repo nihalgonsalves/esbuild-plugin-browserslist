@@ -1,3 +1,7 @@
 {
-  "extends": ["./node_modules/@nihalgonsalves/esconfig/.eslintrc"]
+  "plugins": ["jest"],
+  "extends": [
+    "./node_modules/@nihalgonsalves/esconfig/.eslintrc",
+    "plugin:jest/recommended"
+  ]
 }

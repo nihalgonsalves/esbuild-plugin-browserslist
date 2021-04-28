@@ -33,13 +33,26 @@ describe('resolveToEsbuildTarget', () => {
     expect(logs).toEqual([]);
   });
 
-  it('skips unmappable targets', () => {
+  it('throws an error on no targets', () => {
     const query = ['ie 11'];
-    expect(browserslist(query)).toEqual(query);
+
+    expect(() =>
+      resolveToEsbuildTarget(browserslist(query, {}), logFn),
+    ).toThrow(/Could not resolve/);
+
+    expect(logs).toMatchInlineSnapshot(`
+      Array [
+        "Skipping unknown target: entry=ie 11, browser=ie, version=11",
+      ]
+    `);
+  });
+
+  it('skips unmappable targets', () => {
+    const query = ['chrome 90', 'ie 11'];
 
     const result = resolveToEsbuildTarget(browserslist(query, {}), logFn);
 
-    expect(result.length).toBe(0);
+    expect(result).toEqual([{ target: EsbuildEngine.Chrome, version: '90' }]);
     expect(logs).toMatchInlineSnapshot(`
       Array [
         "Skipping unknown target: entry=ie 11, browser=ie, version=11",
@@ -50,6 +63,7 @@ describe('resolveToEsbuildTarget', () => {
   it('skips unknown targets', () => {
     const result = resolveToEsbuildTarget(
       [
+        'chrome 90',
         'notABrowser 123',
         'chrome notAVersion',
         'chrome 1.2.3.4',
@@ -62,7 +76,7 @@ describe('resolveToEsbuildTarget', () => {
       logFn,
     );
 
-    expect(result.length).toBe(0);
+    expect(result).toEqual([{ target: EsbuildEngine.Chrome, version: '90' }]);
     expect(logs).toMatchInlineSnapshot(`
       Array [
         "Could not parse Browserslist result to a meaningful format. entry=notABrowser 123",
