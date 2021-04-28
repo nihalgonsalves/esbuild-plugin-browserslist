@@ -1,7 +1,9 @@
 {
-  "extends": "@nihalgonsalves/esconfig",
+  "extends": "./tsconfig.json",
   "compilerOptions": {
+    "target": "es2019",
     "noEmit": false,
+    "incremental": false,
     "module": "esnext",
     "outDir": "./dist/esm/"
   },
