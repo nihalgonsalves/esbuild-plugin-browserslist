@@ -24,7 +24,8 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src/",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prepublishOnly": "yarn build && yarn lint && yarn test"
   },
   "peerDependencies": {
     "browserslist": "^4.16.5",
