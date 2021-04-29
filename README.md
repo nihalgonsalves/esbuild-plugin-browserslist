@@ -24,7 +24,7 @@ await esbuild.build({
   entryPoints: ['./foo/bar.ts'],
   // ... other options (except `target`) ...
   plugins: [
-    esbuildPluginBrowserslist(browserslist('default'), {
+    esbuildPluginBrowserslist(browserslist('defaults'), {
       printUnknownTargets: false,
     }),
   ],
@@ -33,7 +33,7 @@ await esbuild.build({
 // Or:
 
 const target = resolveToEsbuildTarget(
-  browserslist('default', {
+  browserslist('defaults', {
     printUnknownTargets: false,
   }),
 );
