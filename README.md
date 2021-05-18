@@ -32,11 +32,9 @@ await esbuild.build({
 
 // Or:
 
-const target = resolveToEsbuildTarget(
-  browserslist('defaults', {
-    printUnknownTargets: false,
-  }),
-);
+const target = resolveToEsbuildTarget(browserslist('defaults'), {
+  printUnknownTargets: false,
+});
 
 await esbuild.build({
   entryPoints: ['./foo/bar.ts'],
