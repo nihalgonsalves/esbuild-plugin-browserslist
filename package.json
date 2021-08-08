@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "debug": "^4.3.2",
-    "zod": "^1.11.16"
+    "zod": "^3.7.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",

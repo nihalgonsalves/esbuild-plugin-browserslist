@@ -1,4 +1,4 @@
-import * as z from 'zod';
+import { z } from 'zod';
 
 import { BrowserslistEsbuildMapping, BrowserslistKind } from './types';
 import type { EsbuildEngine } from './types';
