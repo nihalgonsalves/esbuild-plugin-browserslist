@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.1.1...v0.2.0) (2021-08-08)
+
+### ⚠ BREAKING CHANGES
+
+- **deps:** esbuild v0.12 peer dependency upgrade
+
+Co-authored-by: Nihal Gonsalves <nihal@nihalgonsalves.com>
+
+- **deps:** upgrade esbuild ([#4](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/issues/4)) ([2f06303](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/commit/2f06303225baa3352e6c6fe22eb116120b14ca91))
+
 ### [0.1.1](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.1.0...v0.1.1) (2021-08-08)
 
 ## 0.1.0 (2021-04-28)
