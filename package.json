@@ -44,7 +44,7 @@
     "@types/node": "16",
     "browserslist": "^4.17.4",
     "esbuild": "~0.13.8",
-    "eslint": "^8.0.1",
+    "eslint": "^7.32.0",
     "eslint-plugin-jest": "^25.2.2",
     "husky": "^7.0.2",
     "jest": "^27.3.0",
