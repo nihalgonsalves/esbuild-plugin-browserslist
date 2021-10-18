@@ -60,7 +60,7 @@ describe('esbuild-plugin-browserslist', () => {
           input: `const x = foo?.bar;`,
           // i.e. default
           query: undefined,
-          expectedOutput: `const x = foo?.bar;`,
+          expectedOutput: `const x = foo == null ? void 0 : foo.bar;`,
         },
       ].map(async ({ input, query, expectedOutput }) => {
         const { entryPoint, outfile } = await getFile(input);
