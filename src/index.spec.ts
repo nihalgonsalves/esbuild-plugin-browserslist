@@ -48,7 +48,7 @@ describe('esbuild-plugin-browserslist', () => {
         },
         {
           input: `const x = foo?.bar;`,
-          query: ['node 14'],
+          query: ['node 16'],
           expectedOutput: `const x = foo?.bar;`,
         },
         {
