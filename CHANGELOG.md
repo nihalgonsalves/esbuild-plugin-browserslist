@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.8](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.4.7...v0.4.8) (2022-03-23)
+
+### Bug Fixes
+
+- missing comma ([3da5970](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/commit/3da59704d1d0c03df362b0d1f4471d8c02be89ae))
+
 ### [0.4.7](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.4.6...v0.4.7) (2022-03-23)
 
 ### [0.4.6](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.4.5...v0.4.6) (2022-03-09)
