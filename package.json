@@ -3,6 +3,10 @@
   "description": "Configure esbuild's target based on a browserslist query",
   "version": "0.4.7",
   "author": "Nihal Gonsalves <nihal@nihalgonsalves.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nihalgonsalves/esbuild-plugin-browserslist.git"
+  }
   "license": "MIT",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
