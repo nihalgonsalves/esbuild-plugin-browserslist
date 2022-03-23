@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.7](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.4.6...v0.4.7) (2022-03-23)
+
 ### [0.4.6](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.4.5...v0.4.6) (2022-03-09)
 
 ### [0.4.5](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.4.4...v0.4.5) (2022-03-02)
