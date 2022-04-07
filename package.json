@@ -1,7 +1,7 @@
 {
   "name": "esbuild-plugin-browserslist",
   "description": "Configure esbuild's target based on a browserslist query",
-  "version": "0.4.8",
+  "version": "0.4.9",
   "author": "Nihal Gonsalves <nihal@nihalgonsalves.com>",
   "repository": {
     "type": "git",
