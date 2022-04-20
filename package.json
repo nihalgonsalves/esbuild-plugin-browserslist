@@ -33,7 +33,7 @@
   },
   "peerDependencies": {
     "browserslist": "^4.20.2",
-    "esbuild": "~0.14.32"
+    "esbuild": "~0.14.36"
   },
   "dependencies": {
     "debug": "^4.3.4",
@@ -47,9 +47,9 @@
     "@types/jest": "^27.4.1",
     "@types/node": "17",
     "browserslist": "^4.20.2",
-    "esbuild": "~0.14.32",
-    "eslint": "^8.12.0",
-    "eslint-plugin-jest": "^26.1.3",
+    "esbuild": "~0.14.36",
+    "eslint": "^8.13.0",
+    "eslint-plugin-jest": "^26.1.4",
     "husky": "^7.0.4",
     "jest": "^27.5.1",
     "prettier": "^2.6.2",
