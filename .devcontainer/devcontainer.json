@@ -1,0 +1,9 @@
+{
+  "name": "Node.js",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "extensions": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"],
+  "postCreateCommand": "yarn install",
+  "remoteUser": "node"
+}
