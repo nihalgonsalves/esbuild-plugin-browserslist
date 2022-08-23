@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.4.13...v0.5.0) (2022-08-23)
+
+### ⚠ BREAKING CHANGES
+
+- Drops support for EOL Node 12. v16 LTS is recommended
+
+### Bug Fixes
+
+- update correct lockfile ([fcbdd67](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/commit/fcbdd674c5c537fec5a028f8531ecd98cca7d37b))
+
+- drop support for node@12 ([88b66cb](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/commit/88b66cb8c26fdd6d988e5631581099ed7b35685e))
+
 ### [0.4.13](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.4.12...v0.4.13) (2022-08-03)
 
 ### [0.4.12](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.4.11...v0.4.12) (2022-06-29)
