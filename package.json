@@ -45,7 +45,7 @@
     "@nihalgonsalves/esconfig": "^0.2.1",
     "@types/debug": "^4.1.7",
     "@types/jest": "^28.1.7",
-    "@types/node": "16",
+    "@types/node": "18",
     "browserslist": "^4.21.3",
     "esbuild": "~0.15.5",
     "eslint": "^8.22.0",
