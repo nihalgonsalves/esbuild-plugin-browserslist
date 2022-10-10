@@ -60,7 +60,7 @@ describe('esbuild-plugin-browserslist', () => {
           input: `const x = foo?.bar;`,
           // i.e. default
           query: undefined,
-          expectedOutput: `const x = foo == null ? void 0 : foo.bar;`,
+          expectedOutput: `const x = foo?.bar;`,
         },
       ].map(async ({ input, query, expectedOutput }) => {
         const { entryPoint, outfile } = await getFile(input);
@@ -97,8 +97,8 @@ describe('esbuild-plugin-browserslist', () => {
     });
 
     expect(consoleSpy.mock.calls).toMatchInlineSnapshot(`
-      Array [
-        Array [
+      [
+        [
           "[esbuild-plugin-browserslist] Skipping unknown target: entry=op_mob all, browser=op_mob, version=1",
         ],
       ]

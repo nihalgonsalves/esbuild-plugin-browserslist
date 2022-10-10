@@ -41,7 +41,7 @@ describe('resolveToEsbuildTarget', () => {
     ).toThrow(/Could not resolve/);
 
     expect(logs).toMatchInlineSnapshot(`
-      Array [
+      [
         "Skipping unknown target: entry=ie 11, browser=ie, version=11",
       ]
     `);
@@ -54,7 +54,7 @@ describe('resolveToEsbuildTarget', () => {
 
     expect(result).toEqual([{ target: EsbuildEngine.Chrome, version: '90' }]);
     expect(logs).toMatchInlineSnapshot(`
-      Array [
+      [
         "Skipping unknown target: entry=ie 11, browser=ie, version=11",
       ]
     `);
@@ -78,7 +78,7 @@ describe('resolveToEsbuildTarget', () => {
 
     expect(result).toEqual([{ target: EsbuildEngine.Chrome, version: '90' }]);
     expect(logs).toMatchInlineSnapshot(`
-      Array [
+      [
         "Could not parse Browserslist result to a meaningful format. entry=notABrowser 123",
         "Could not parse Browserslist result to a meaningful format. entry=chrome notAVersion",
         "Could not parse Browserslist result to a meaningful format. entry=chrome 1.2.3.4",
