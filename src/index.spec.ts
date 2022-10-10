@@ -97,8 +97,8 @@ describe('esbuild-plugin-browserslist', () => {
     });
 
     expect(consoleSpy.mock.calls).toMatchInlineSnapshot(`
-      Array [
-        Array [
+      [
+        [
           "[esbuild-plugin-browserslist] Skipping unknown target: entry=op_mob all, browser=op_mob, version=1",
         ],
       ]
