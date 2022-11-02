@@ -40,11 +40,11 @@
     "zod": "^3.19.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.1.2",
-    "@commitlint/config-conventional": "^17.1.0",
-    "@nihalgonsalves/esconfig": "^0.2.1",
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
+    "@nihalgonsalves/esconfig": "^0.2.2",
     "@types/debug": "^4.1.7",
-    "@types/jest": "^29.2.0",
+    "@types/jest": "^29.2.1",
     "@types/node": "18",
     "browserslist": "^4.21.4",
     "esbuild": "~0.15.12",
