@@ -34,7 +34,7 @@ describe('resolveToEsbuildTarget', () => {
   });
 
   it('throws an error on no targets', () => {
-    const query = ['ie 11'];
+    const query = ['ie_mob 11'];
 
     expect(() =>
       resolveToEsbuildTarget(browserslist(query, {}), logFn),
@@ -42,20 +42,20 @@ describe('resolveToEsbuildTarget', () => {
 
     expect(logs).toMatchInlineSnapshot(`
       [
-        "Skipping unknown target: entry=ie 11, browser=ie, version=11",
+        "Skipping unknown target: entry=ie_mob 11, browser=ie_mob, version=11",
       ]
     `);
   });
 
   it('skips unmappable targets', () => {
-    const query = ['chrome 90', 'ie 11'];
+    const query = ['chrome 90', 'ie_mob 11'];
 
     const result = resolveToEsbuildTarget(browserslist(query, {}), logFn);
 
     expect(result).toEqual([{ target: EsbuildEngine.Chrome, version: '90' }]);
     expect(logs).toMatchInlineSnapshot(`
       [
-        "Skipping unknown target: entry=ie 11, browser=ie, version=11",
+        "Skipping unknown target: entry=ie_mob 11, browser=ie_mob, version=11",
       ]
     `);
   });
