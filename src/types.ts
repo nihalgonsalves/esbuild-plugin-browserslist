@@ -32,14 +32,18 @@ export enum BrowserslistKind {
   Node = 'node',
 }
 
-/** https://github.com/evanw/esbuild/blob/v0.11.15/internal/compat/js_table.go#L17-L35 */
+/** https://github.com/evanw/esbuild/blob/v0.15.12/internal/compat/js_table.go#L21-L47 */
 export enum EsbuildEngine {
   Chrome = 'chrome',
   Edge = 'edge',
   ES = 'es',
   Firefox = 'firefox',
+  Hermes = 'hermes',
+  IE = 'ie',
   IOS = 'ios',
   Node = 'node',
+  Opera = 'opera',
+  Rhino = 'rhino',
   Safari = 'safari',
 }
 
@@ -53,6 +57,8 @@ export const BrowserslistEsbuildMapping: Partial<
   [BrowserslistKind.Safari]: EsbuildEngine.Safari,
   [BrowserslistKind.iOS]: EsbuildEngine.IOS,
   [BrowserslistKind.Node]: EsbuildEngine.Node,
+  [BrowserslistKind.IE]: EsbuildEngine.IE,
+  [BrowserslistKind.Opera]: EsbuildEngine.Opera,
   // approximate mapping
   [BrowserslistKind.Android]: EsbuildEngine.Chrome,
   [BrowserslistKind.AndroidChrome]: EsbuildEngine.Chrome,
