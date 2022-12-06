@@ -43,7 +43,7 @@ export enum EsbuildEngine {
   IOS = 'ios',
   Node = 'node',
   Opera = 'opera',
-  Rhino = 'rhino'
+  Rhino = 'rhino',
   Safari = 'safari',
 }
 
