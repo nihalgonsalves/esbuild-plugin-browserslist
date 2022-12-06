@@ -20,6 +20,8 @@ describe('resolveToEsbuildTarget', () => {
       'firefox 88',
       'node 14.16.0',
       'ios_saf 14.0-14.4',
+      'ios_saf 14.0-14.4',
+      'opera 91',
     ];
 
     const result = resolveToEsbuildTarget(browserslist(query, {}), logFn);
@@ -28,6 +30,7 @@ describe('resolveToEsbuildTarget', () => {
       { target: EsbuildEngine.Firefox, version: '88' },
       { target: EsbuildEngine.IOS, version: '14.0' },
       { target: EsbuildEngine.Node, version: '14.16.0' },
+      { target: EsbuildEngine.Opera, version: '91' },
     ]);
 
     expect(logs).toEqual([]);
