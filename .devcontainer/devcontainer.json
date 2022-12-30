@@ -4,6 +4,7 @@
     "dockerfile": "Dockerfile"
   },
   "extensions": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"],
+  "onCreateCommand": "npm config set -g '//registry.npmjs.org/:_authToken' \"${NPM_TOKEN}\"",
   "postCreateCommand": "yarn install",
   "remoteUser": "node"
 }
