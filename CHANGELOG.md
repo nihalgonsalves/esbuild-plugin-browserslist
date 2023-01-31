@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.6.0...v0.7.0) (2023-01-31)
+
+### ⚠ BREAKING CHANGES
+
+- **deps:** peerDep esbuild@~0.17.x. This is a breaking change
+  as pre-v1 semver-minor versions of esbuild are not backwards compatible.
+
+- **deps:** update all incl. esbuild@~0.17.x ([037e01b](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/commit/037e01bc49a08d38ed0837f0ccb886dc4d73cd24))
+
 ## [0.6.0](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.5.3...v0.6.0) (2022-12-07)
 
 ### ⚠ BREAKING CHANGES
