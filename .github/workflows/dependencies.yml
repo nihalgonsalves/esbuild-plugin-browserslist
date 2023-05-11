@@ -21,7 +21,7 @@ jobs:
       - name: Update Dependencies
         run: |
           yarn install
-          npx npm-check-updates --upgrade --packageFile package.json
+          npx npm-check-updates --upgrade --packageFile package.json --reject @types/node
           yarn install
           yarn upgrade
       - name: Create Pull Request
