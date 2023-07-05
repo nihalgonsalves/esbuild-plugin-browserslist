@@ -1,0 +1,76 @@
+name: publish
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+    paths:
+      - 'package.json'
+      - 'yarn.lock'
+      - 'src/*'
+      - 'tsconfig.json'
+      - 'tsconfig.build.json'
+      - '.github/workflows/publish.yml'
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.result }}
+    steps:
+      - name: git config
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: yarn install --frozen-lockfile
+      # not dry-run, but this job doesn't commit or push anything anyway
+      # required to get the actual bumped version
+      - run: yarn standard-version
+      # yarn doesn't have an equivalent preview
+      - run: npm publish --dry-run
+      - id: version
+        uses: actions/github-script@v4
+        with:
+          result-encoding: string
+          script: |
+            const version = require('./package.json').version
+            core.warning(`Approving this deployment will publish version ${version}`)
+            return version
+  publish:
+    needs: [preview]
+    runs-on: ubuntu-latest
+    environment:
+      name: NPM
+      url: https://www.npmjs.com/package/esbuild-plugin-browserslist/v/${{ needs.preview.outputs.version }}
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - name: git config
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: 'https://registry.npmjs.org'
+      - run: yarn install --frozen-lockfile
+      - run: yarn standard-version
+      - env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        # yarn doesn't have an equivalent --provenance
+        run: npm publish --provenance --access public
+      - run: git push --follow-tags origin main
+      - uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ needs.preview.outputs.version }}
