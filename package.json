@@ -16,11 +16,6 @@
   "files": [
     "dist"
   ],
-  "standard-version": {
-    "scripts": {
-      "postchangelog": "prettier --write CHANGELOG.md"
-    }
-  },
   "scripts": {
     "typecheck": "tsc",
     "build": "rm -rf dist && tsc --project tsconfig.build.json",
@@ -53,7 +48,6 @@
     "husky": "^8.0.3",
     "jest": "^29.5.0",
     "prettier": "^2.8.8",
-    "standard-version": "^9.5.0",
     "ts-jest": "^29.1.1",
     "typescript": "^5.1.6"
   }

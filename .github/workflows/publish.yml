@@ -11,50 +11,35 @@ on:
       - 'tsconfig.json'
       - 'tsconfig.build.json'
       - '.github/workflows/publish.yml'
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
 jobs:
-  preview:
-    runs-on: ubuntu-latest
+  release:
     outputs:
-      version: ${{ steps.version.outputs.result }}
+      release_created: ${{ steps.release.outputs.release_created }}
+      version: ${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }}
+    runs-on: ubuntu-latest
     steps:
-      - name: git config
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-      - uses: actions/checkout@v3
+      - uses: google-github-actions/release-please-action@v3
+        id: release
         with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - run: yarn install --frozen-lockfile
-      # not dry-run, but this job doesn't commit or push anything anyway
-      # required to get the actual bumped version
-      - run: yarn standard-version
-      # yarn doesn't have an equivalent preview
-      - run: npm publish --dry-run
-      - id: version
-        uses: actions/github-script@v4
-        with:
-          result-encoding: string
-          script: |
-            const version = require('./package.json').version
-            core.warning(`Approving this deployment will publish version ${version}`)
-            return version
+          release-type: node
+          package-name: 'esbuild-plugin-browserslist'
+          bump-minor-pre-major: true
+          bump-patch-for-minor-pre-major: true
+
   publish:
-    needs: [preview]
+    if: ${{ needs.release.outputs.release_created }}
+    needs: [release]
     runs-on: ubuntu-latest
     environment:
       name: NPM
-      url: https://www.npmjs.com/package/esbuild-plugin-browserslist/v/${{ needs.preview.outputs.version }}
-    permissions:
-      contents: write
-      id-token: write
+      url: https://www.npmjs.com/package/esbuild-plugin-browserslist/v/${{ needs.release.outputs.version }}
     steps:
-      - name: git config
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
@@ -62,15 +47,9 @@ jobs:
         with:
           node-version: 18
           registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
       - run: yarn install --frozen-lockfile
-      - run: yarn standard-version
       - env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         # yarn doesn't have an equivalent --provenance
         run: npm publish --provenance --access public
-      - run: git push --follow-tags origin main
-      - uses: softprops/action-gh-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v${{ needs.preview.outputs.version }}
