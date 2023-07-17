@@ -1,7 +1,7 @@
 {
-  "plugins": ["jest"],
+  "plugins": ["vitest"],
   "extends": [
     "./node_modules/@nihalgonsalves/esconfig/.eslintrc",
-    "plugin:jest/recommended"
+    "plugin:vitest/recommended"
   ]
 }
