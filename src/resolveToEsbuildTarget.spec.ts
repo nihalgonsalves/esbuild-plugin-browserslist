@@ -1,20 +1,22 @@
 import browserslist from 'browserslist';
+import { describe, it } from 'vitest';
 
 import { resolveToEsbuildTarget } from './resolveToEsbuildTarget';
 import { EsbuildEngine } from './types';
 
-describe('resolveToEsbuildTarget', () => {
-  let logs: string[];
-  let logFn: (log: string) => void;
+const useLogs = () => {
+  const logs: string[] = [];
+  const logFn = (log: string) => {
+    logs.push(log);
+  };
 
-  beforeEach(() => {
-    logs = [];
-    logFn = (log) => {
-      logs.push(log);
-    };
-  });
+  return { logs, logFn };
+};
 
-  it('resolves browserlist versions to esbuild configs', () => {
+describe.concurrent('resolveToEsbuildTarget', () => {
+  it('resolves browserlist versions to esbuild configs', ({ expect }) => {
+    const { logs, logFn } = useLogs();
+
     const query = [
       'chrome 87',
       'firefox 88',
@@ -36,7 +38,9 @@ describe('resolveToEsbuildTarget', () => {
     expect(logs).toEqual([]);
   });
 
-  it('throws an error on no targets', () => {
+  it('throws an error on no targets', ({ expect }) => {
+    const { logs, logFn } = useLogs();
+
     const query = ['ie_mob 11'];
 
     expect(() =>
@@ -50,7 +54,9 @@ describe('resolveToEsbuildTarget', () => {
     `);
   });
 
-  it('skips unmappable targets', () => {
+  it('skips unmappable targets', ({ expect }) => {
+    const { logs, logFn } = useLogs();
+
     const query = ['chrome 90', 'ie_mob 11'];
 
     const result = resolveToEsbuildTarget(browserslist(query, {}), logFn);
@@ -63,7 +69,9 @@ describe('resolveToEsbuildTarget', () => {
     `);
   });
 
-  it('skips unknown targets', () => {
+  it('skips unknown targets', ({ expect }) => {
+    const { logs, logFn } = useLogs();
+
     const result = resolveToEsbuildTarget(
       [
         'chrome 90',

@@ -5,6 +5,7 @@ import path from 'path';
 
 import browserslist from 'browserslist';
 import * as esbuild from 'esbuild';
+import { vi, describe, it } from 'vitest';
 
 import { esbuildPluginBrowserslist } from '.';
 
@@ -20,8 +21,8 @@ const getFile = async (
   return { entryPoint, outfile };
 };
 
-describe('esbuild-plugin-browserslist', () => {
-  it('throws an error when a target is already set', async () => {
+describe.concurrent('esbuild-plugin-browserslist', () => {
+  it('throws an error when a target is already set', async ({ expect }) => {
     const { entryPoint, outfile } = await getFile('');
 
     await expect(
@@ -38,7 +39,7 @@ describe('esbuild-plugin-browserslist', () => {
     ).rejects.toThrow(/cannot be used with a set target/);
   });
 
-  it('builds correctly', async () => {
+  it('builds correctly', async ({ expect }) => {
     await Promise.all(
       [
         {
@@ -82,8 +83,8 @@ describe('esbuild-plugin-browserslist', () => {
     );
   });
 
-  it('also logs in the usual way', async () => {
-    const consoleSpy = jest.spyOn(console, 'error');
+  it('also logs in the usual way', async ({ expect }) => {
+    const consoleSpy = vi.spyOn(console, 'error');
 
     const { entryPoint, outfile } = await getFile('');
     await esbuild.build({
