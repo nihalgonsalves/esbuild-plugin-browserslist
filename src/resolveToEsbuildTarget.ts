@@ -47,7 +47,7 @@ export const resolveToEsbuildTarget = (
 
       dbg('Got target for entry=%s: %s', entry, esbuildTarget);
 
-      if (!esbuildTarget) {
+      if (esbuildTarget === undefined) {
         logFn(
           `Skipping unknown target: entry=${entry}, browser=${browser}, version=${version}`,
         );
