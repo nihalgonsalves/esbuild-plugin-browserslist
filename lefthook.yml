@@ -21,4 +21,4 @@ pre-commit:
       run: yarn typecheck
     test:
       glob: 'src/**.{js,ts,jsx,tsx,mjs,mts,cjs,cts}'
-      run: yarn test
+      run: CI=1 yarn test

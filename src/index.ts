@@ -25,7 +25,7 @@ export const esbuildPluginBrowserslist = (
   setup(build) {
     const esbuildOptions = build.initialOptions;
 
-    if (esbuildOptions.target) {
+    if (esbuildOptions.target !== undefined) {
       dbg(
         'Got esbuildOptions.target=%s, expected=<falsey>',
         esbuildOptions.target,
