@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.9.0](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.8.1...v0.9.0) (2023-08-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* **peer-deps:** This is the same breaking change as v0.8.0 and a fix for that release specifying the wrong peer dependency, but will make this install fail for users of esbuild <0.19.2.
+
+### Bug Fixes
+
+* **peer-deps:** upgrade `esbuild` peer dep to new major version ~19 ([#125](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/issues/125)) ([98d334a](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/commit/98d334a59591412dca40ba929d2aa8dddf698b51))
+
 ### [0.8.1](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.8.0...v0.8.1) (2023-07-05)
 
 ## [0.8.0](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.7.2...v0.8.0) (2023-06-14)
