@@ -27,7 +27,7 @@
   },
   "peerDependencies": {
     "browserslist": "^4.21.8",
-    "esbuild": "~0.18.2"
+    "esbuild": "~0.19.2"
   },
   "dependencies": {
     "debug": "^4.3.4",
