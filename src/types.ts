@@ -32,9 +32,10 @@ export enum BrowserslistKind {
   Node = 'node',
 }
 
-/** https://github.com/evanw/esbuild/blob/v0.15.12/internal/compat/js_table.go#L21-L47 */
+/** https://github.com/evanw/esbuild/blob/v0.19.2/internal/compat/js_table.go#L22-L50 */
 export enum EsbuildEngine {
   Chrome = 'chrome',
+  Deno = 'deno',
   Edge = 'edge',
   ES = 'es',
   Firefox = 'firefox',
