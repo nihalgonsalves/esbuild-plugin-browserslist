@@ -90,3 +90,6 @@ typings/
 # Output
 dist
 *.tsbuildinfo
+
+# lefthook
+lefthook-local.yml
