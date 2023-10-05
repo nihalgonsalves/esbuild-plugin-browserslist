@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.9.1](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.9.0...v0.9.1) (2023-10-05)
+
+
+### Bug Fixes
+
+* **deps-security:** bump zod from 3.22.2 to 3.22.3 ([#137](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/issues/137)) ([6b984e8](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/commit/6b984e8737726128afa7fbff09ccc55714a96702))
+
 ## [0.9.0](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.8.1...v0.9.0) (2023-08-17)
 
 
