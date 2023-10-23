@@ -541,9 +541,9 @@
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
 "@nihalgonsalves/esconfig@^0.6.0":
-  version "0.6.6"
-  resolved "https://registry.yarnpkg.com/@nihalgonsalves/esconfig/-/esconfig-0.6.6.tgz#6aaa24810105de1b854f11e0c15a500f3a4b3390"
-  integrity sha512-fp/03+lkoX56drSla9Ou6QZR1w1SPvgRtoQNatUDhJScvjTSDMOoj89p9v4qdqyiTkuPP39Kn4QR3vPirbmRNA==
+  version "0.6.7"
+  resolved "https://registry.yarnpkg.com/@nihalgonsalves/esconfig/-/esconfig-0.6.7.tgz#914e11e5f39947f4e94bc51e01b9409524df77e5"
+  integrity sha512-WYBUGujQ3jxmkyz0dG8OGTOrZm2DMqMNApJs0fnhYGOyHwEOwQjiI/TYSseNXyF83kXeaXxE7uNyGw8s3RD94w==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^6.2.1"
     "@typescript-eslint/parser" "^6.2.1"
