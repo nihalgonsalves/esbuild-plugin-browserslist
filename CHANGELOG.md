@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.0](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.9.1...v0.10.0) (2023-10-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* Drops support for EoL Node 14 and 16
+
+### Miscellaneous Chores
+
+* use node 20 (LTS) & drop 14, 16 ([#142](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/issues/142)) ([9021334](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/commit/9021334783bb5b716ca1af1e640bb809cfaebb4d))
+
 ## [0.9.1](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.9.0...v0.9.1) (2023-10-05)
 
 
