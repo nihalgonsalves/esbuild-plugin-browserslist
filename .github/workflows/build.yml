@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
           cache: yarn
       - run: yarn install --frozen-lockfile
       - run: yarn format:check
@@ -16,7 +16,7 @@ jobs:
       - run: yarn build
       - run: yarn test
 
-      - name: test built package
+      - name: test built package on node@20
         run: |
           mkdir ../foo
           cd ../foo
@@ -32,4 +32,18 @@ jobs:
             assert.strictEqual(esbuildPluginBrowserslist().name, 'esbuild-plugin-browserslist');
             assert.strictEqual(resolveToEsbuildTarget(['chrome 90'])[0], 'chrome90');
           " > test.js
+
+          node -v
+          node test.js
+
+      # Not using a matrix here since it's simpler
+      # to just duplicate it and not spawn new instances
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: test build package on node@18
+        run: |
+          cd ../foo
+
+          node -v
           node test.js
