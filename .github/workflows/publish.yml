@@ -4,13 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'package.json'
-      - 'yarn.lock'
-      - 'src/*'
-      - 'tsconfig.json'
-      - 'tsconfig.build.json'
-      - '.github/workflows/publish.yml'
 
 permissions:
   contents: write
@@ -40,15 +33,17 @@ jobs:
       name: NPM
       url: https://www.npmjs.com/package/esbuild-plugin-browserslist/v/${{ needs.release.outputs.version }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+        # waiting on: https://github.com/actions/setup-node/issues/531
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: 'https://registry.npmjs.org'
           cache: 'yarn'
-      - run: yarn install --frozen-lockfile
+      - run: yarn install --immutable
       - env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         # yarn doesn't have an equivalent --provenance

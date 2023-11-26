@@ -4,12 +4,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+        # waiting on: https://github.com/actions/setup-node/issues/531
+      - run: corepack enable
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: yarn
-      - run: yarn install --frozen-lockfile
+      - run: yarn install --immutable
       - run: yarn format:check
       - run: yarn lint
       - run: yarn typecheck
@@ -38,7 +40,7 @@ jobs:
 
       # Not using a matrix here since it's simpler
       # to just duplicate it and not spawn new instances
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
       - name: test build package on node@18

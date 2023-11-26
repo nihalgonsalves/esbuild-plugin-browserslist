@@ -3,8 +3,11 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "extensions": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"],
-  "onCreateCommand": "npm config set -g '//registry.npmjs.org/:_authToken' \"${NPM_TOKEN}\"",
-  "postCreateCommand": "yarn install",
+  "customizations": {
+    "vscode": {
+      "extensions": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"]
+    }
+  },
+  "onCreateCommand": "yarn install",
   "remoteUser": "node"
 }
