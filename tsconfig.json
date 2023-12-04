@@ -1,8 +1,9 @@
 {
   "extends": "@nihalgonsalves/esconfig",
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "ES2019",
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "target": "ES2022",
     "noEmit": true
   },
   "include": ["./src/"]
