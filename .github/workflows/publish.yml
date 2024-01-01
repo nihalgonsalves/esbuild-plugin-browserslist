@@ -21,9 +21,6 @@ jobs:
         id: release
         with:
           release-type: node
-          package-name: 'esbuild-plugin-browserslist'
-          bump-minor-pre-major: true
-          bump-patch-for-minor-pre-major: true
 
   publish:
     if: ${{ needs.release.outputs.release_created }}
