@@ -1,7 +1,7 @@
-import type { Plugin } from 'esbuild';
+import type { Plugin } from "esbuild";
 
-import { resolveToEsbuildTarget as resolveToEsbuildTarget_ } from './resolveToEsbuildTarget';
-import { dbg, log, PLUGIN_NAME } from './util';
+import { resolveToEsbuildTarget as resolveToEsbuildTarget_ } from "./resolveToEsbuildTarget";
+import { dbg, log, PLUGIN_NAME } from "./util";
 
 export type Opts = { printUnknownTargets: boolean };
 
@@ -27,7 +27,7 @@ export const esbuildPluginBrowserslist = (
 
     if (esbuildOptions.target !== undefined) {
       dbg(
-        'Got esbuildOptions.target=%s, expected=<falsey>',
+        "Got esbuildOptions.target=%s, expected=<falsey>",
         esbuildOptions.target,
       );
       throw new Error(`${PLUGIN_NAME} cannot be used with a set target`);
@@ -35,7 +35,7 @@ export const esbuildPluginBrowserslist = (
 
     const resolvedTargets = resolveToEsbuildTarget(browserlist, opts);
 
-    dbg('Resolved targets: %j', resolvedTargets);
+    dbg("Resolved targets: %j", resolvedTargets);
 
     esbuildOptions.target = resolvedTargets;
   },

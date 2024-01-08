@@ -1,8 +1,8 @@
-import { z } from 'zod';
+import { z } from "zod";
 
-import { BrowserslistEsbuildMapping, BrowserslistKind } from './types';
-import type { EsbuildEngine } from './types';
-import { dbg } from './util';
+import { BrowserslistEsbuildMapping, BrowserslistKind } from "./types";
+import type { EsbuildEngine } from "./types";
+import { dbg } from "./util";
 
 const BrowserSchema = z.nativeEnum(BrowserslistKind);
 /** 123 or 123.456 or 123.456.789 */
@@ -14,18 +14,18 @@ export const resolveToEsbuildTarget = (
 ): { target: EsbuildEngine; version: string }[] => {
   const targets = browserlist
     .map((entry) => {
-      const [rawBrowser, rawVersionOrRange] = entry.split(' ');
+      const [rawBrowser, rawVersionOrRange] = entry.split(" ");
 
       const rawVersionNormalized = rawVersionOrRange
         // e.g. 13.4-13.7, take the lower range
-        ?.replace(/-[\d.]+$/, '')
+        ?.replace(/-[\d.]+$/, "")
         // all => replace with 1
-        ?.replace('all', '1');
+        ?.replace("all", "1");
 
       const browserResult = BrowserSchema.safeParse(rawBrowser);
       const versionResult = VersionSchema.safeParse(rawVersionNormalized);
 
-      dbg('Got result for entry=%s: %j', entry, {
+      dbg("Got result for entry=%s: %j", entry, {
         rawBrowser,
         rawVersionOrRange,
         rawVersionNormalized,
@@ -45,7 +45,7 @@ export const resolveToEsbuildTarget = (
 
       const esbuildTarget = BrowserslistEsbuildMapping[browser];
 
-      dbg('Got target for entry=%s: %s', entry, esbuildTarget);
+      dbg("Got target for entry=%s: %s", entry, esbuildTarget);
 
       if (esbuildTarget === undefined) {
         logFn(
@@ -59,7 +59,7 @@ export const resolveToEsbuildTarget = (
     .filter((x): x is NonNullable<typeof x> => x != null);
 
   if (targets.length === 0) {
-    throw new Error('Could not resolve any esbuild targets');
+    throw new Error("Could not resolve any esbuild targets");
   }
 
   return targets;

@@ -1,33 +1,33 @@
-import crypto from 'crypto';
-import fs from 'fs';
-import os from 'os';
-import path from 'path';
+import crypto from "crypto";
+import fs from "fs";
+import os from "os";
+import path from "path";
 
-import browserslist from 'browserslist';
-import * as esbuild from 'esbuild';
-import { vi, describe, it } from 'vitest';
+import browserslist from "browserslist";
+import * as esbuild from "esbuild";
+import { vi, describe, it } from "vitest";
 
-import { esbuildPluginBrowserslist } from '.';
+import { esbuildPluginBrowserslist } from ".";
 
 const getFile = async (
   input: string,
 ): Promise<{ entryPoint: string; outfile: string }> => {
-  const randomString = crypto.randomBytes(16).toString('hex');
+  const randomString = crypto.randomBytes(16).toString("hex");
   const entryPoint = path.join(os.tmpdir(), `${randomString}.js`);
   const outfile = path.join(os.tmpdir(), `${randomString}-out.js`);
 
-  await fs.promises.writeFile(entryPoint, input, 'utf8');
+  await fs.promises.writeFile(entryPoint, input, "utf8");
 
   return { entryPoint, outfile };
 };
 
-describe.concurrent('esbuild-plugin-browserslist', () => {
-  it('throws an error when a target is already set', async ({ expect }) => {
-    const { entryPoint, outfile } = await getFile('');
+describe.concurrent("esbuild-plugin-browserslist", () => {
+  it("throws an error when a target is already set", async ({ expect }) => {
+    const { entryPoint, outfile } = await getFile("");
 
     await expect(
       esbuild.build({
-        target: 'node14',
+        target: "node14",
         entryPoints: [entryPoint],
         outfile,
         plugins: [
@@ -39,22 +39,22 @@ describe.concurrent('esbuild-plugin-browserslist', () => {
     ).rejects.toThrow(/cannot be used with a set target/);
   });
 
-  it('builds correctly', async ({ expect }) => {
+  it("builds correctly", async ({ expect }) => {
     await Promise.all(
       [
         {
           input: `const x = foo?.bar;`,
-          query: ['chrome 50'],
+          query: ["chrome 50"],
           expectedOutput: `const x = foo == null ? void 0 : foo.bar;`,
         },
         {
           input: `const x = foo?.bar;`,
-          query: ['node 16'],
+          query: ["node 16"],
           expectedOutput: `const x = foo?.bar;`,
         },
         {
           input: `const x = foo?.bar;`,
-          query: ['ios_saf 13.4-13.7'],
+          query: ["ios_saf 13.4-13.7"],
           expectedOutput: `const x = foo?.bar;`,
         },
         {
@@ -76,22 +76,22 @@ describe.concurrent('esbuild-plugin-browserslist', () => {
           ],
         });
 
-        expect(await fs.promises.readFile(outfile, 'utf8')).toBe(
+        expect(await fs.promises.readFile(outfile, "utf8")).toBe(
           `${expectedOutput}\n`,
         );
       }),
     );
   });
 
-  it('also logs in the usual way', async ({ expect }) => {
-    const consoleSpy = vi.spyOn(console, 'error');
+  it("also logs in the usual way", async ({ expect }) => {
+    const consoleSpy = vi.spyOn(console, "error");
 
-    const { entryPoint, outfile } = await getFile('');
+    const { entryPoint, outfile } = await getFile("");
     await esbuild.build({
       entryPoints: [entryPoint],
       outfile,
       plugins: [
-        esbuildPluginBrowserslist(['chrome 90', 'op_mob all'], {
+        esbuildPluginBrowserslist(["chrome 90", "op_mob all"], {
           printUnknownTargets: true,
         }),
       ],
