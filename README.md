@@ -13,12 +13,12 @@ yarn add esbuild-plugin-browserslist esbuild browserslist
 ## Usage
 
 ```ts
-const esbuild = require("esbuild");
-const browserslist = require("browserslist");
-const {
+import esbuild from "esbuild";
+import browserslist from "browserslist";
+import {
   esbuildPluginBrowserslist,
   resolveToEsbuildTarget,
-} = require("esbuild-plugin-browserslist");
+} from "esbuild-plugin-browserslist";
 
 await esbuild.build({
   entryPoints: ["./foo/bar.ts"],
@@ -41,6 +41,22 @@ await esbuild.build({
   target,
 });
 ```
+
+<details>
+<summary>:information_source: CJS usage instructions</summary>
+
+Adjust the imports as follows:
+
+```ts
+const esbuild = require("esbuild");
+const browserslist = require("browserslist");
+const {
+  esbuildPluginBrowserslist,
+  resolveToEsbuildTarget,
+} = require("esbuild-plugin-browserslist");
+```
+
+</details>
 
 ## Caveats
 
