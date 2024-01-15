@@ -20,7 +20,7 @@ export const resolveToEsbuildTarget = (
         // e.g. 13.4-13.7, take the lower range
         ?.replace(/-[\d.]+$/, "")
         // all => replace with 1
-        ?.replace("all", "1");
+        .replace("all", "1");
 
       const browserResult = BrowserSchema.safeParse(rawBrowser);
       const versionResult = VersionSchema.safeParse(rawVersionNormalized);
