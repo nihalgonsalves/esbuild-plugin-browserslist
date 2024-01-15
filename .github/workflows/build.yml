@@ -19,24 +19,14 @@ jobs:
       - run: yarn test
 
       - name: test built package on node@20
+        working-directory: ./package-test/
         run: |
-          mkdir ../foo
-          cd ../foo
-
-          yarn init -y
-          yarn add esbuild-plugin-browserslist@"../esbuild-plugin-browserslist"
-          yarn install
-
-          echo "
-            const { esbuildPluginBrowserslist, resolveToEsbuildTarget } = require('esbuild-plugin-browserslist');
-            const assert = require('assert');
-            
-            assert.strictEqual(esbuildPluginBrowserslist().name, 'esbuild-plugin-browserslist');
-            assert.strictEqual(resolveToEsbuildTarget(['chrome 90'])[0], 'chrome90');
-          " > test.js
+          # CI implies --immutable
+          yarn install --no-immutable
 
           node -v
-          node test.js
+          node test.cjs
+          node test.mjs
 
       # Not using a matrix here since it's simpler
       # to just duplicate it and not spawn new instances
@@ -44,8 +34,8 @@ jobs:
         with:
           node-version: 18
       - name: test build package on node@18
+        working-directory: ./package-test/
         run: |
-          cd ../foo
-
           node -v
-          node test.js
+          node test.cjs
+          node test.mjs
