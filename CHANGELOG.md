@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.1](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/esbuild-plugin-browserslist-v0.11.0...esbuild-plugin-browserslist-v0.11.1) (2024-01-28)
+
+
+### Bug Fixes
+
+* **ci:** add missing corepack publish step ([1743942](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/commit/1743942b08e2787800a480e7a916f49d257802f6))
+
 ## [0.11.0](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/esbuild-plugin-browserslist-v0.10.0...esbuild-plugin-browserslist-v0.11.0) (2024-01-28)
 
 
