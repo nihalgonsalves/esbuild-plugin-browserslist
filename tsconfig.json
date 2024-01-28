@@ -5,6 +5,7 @@
     "moduleResolution": "Bundler",
     "target": "ES2022",
     "noEmit": true,
+    "skipLibCheck": true,
     "verbatimModuleSyntax": false,
   },
   "include": ["./src/", "./vitest.config.ts"],
