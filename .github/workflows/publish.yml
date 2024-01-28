@@ -32,7 +32,8 @@ jobs:
         with:
           fetch-depth: 0
       - uses: actions/checkout@v4
-        # waiting on: https://github.com/actions/setup-node/issues/531
+      # waiting on: https://github.com/actions/setup-node/issues/531
+      - run: corepack enable
       - uses: actions/setup-node@v4
         with:
           node-version: 20
