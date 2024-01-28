@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.0](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/esbuild-plugin-browserslist-v0.10.0...esbuild-plugin-browserslist-v0.11.0) (2024-01-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** esbuild v0.20.x is a pre-1.0 minor version bump, which signifies breaking changes: https://github.com/evanw/esbuild/releases/tag/v0.20.0
+
+### Miscellaneous Chores
+
+* **deps:** bump the all group with 10 updates ([#163](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/issues/163)) ([20d6167](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/commit/20d6167782f2a1ce861fccee9d82526512d0efb2))
+
 ## [0.10.0](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/v0.9.1...v0.10.0) (2023-10-23)
 
 
