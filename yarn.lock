@@ -844,20 +844,20 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 20.12.2
-  resolution: "@types/node@npm:20.12.2"
+  version: 20.12.7
+  resolution: "@types/node@npm:20.12.7"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/bb47d115a8f95aadebdd6403fee16d149d6b5568ad53bacc42df34c2d572561e36ba47b05f7f68bada43752d7369b470a90df65b646af7502dfb799a21b4fca7
+  checksum: 10c0/dce80d63a3b91892b321af823d624995c61e39c6a223cc0ac481a44d337640cc46931d33efb3beeed75f5c85c3bda1d97cef4c5cd4ec333caf5dee59cff6eca0
   languageName: node
   linkType: hard
 
 "@types/node@npm:18":
-  version: 18.19.28
-  resolution: "@types/node@npm:18.19.28"
+  version: 18.19.31
+  resolution: "@types/node@npm:18.19.31"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/f068c1c01f4b24bc70ad249882176cd6eb8b9e4662b001452383879a70f22153c83de7c06902ae11da1a9ac9bd7778c51d2f6f80cc05da2eec08e071d6a5542f
+  checksum: 10c0/bfebae8389220c0188492c82eaf328f4ba15e6e9b4abee33d6bf36d3b13f188c2f53eb695d427feb882fff09834f467405e2ed9be6aeb6ad4705509822d2ea08
   languageName: node
   linkType: hard
 
@@ -964,7 +964,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:7.7.0, @typescript-eslint/utils@npm:^7.4.0":
+"@typescript-eslint/utils@npm:7.7.0, @typescript-eslint/utils@npm:^7.6.0":
   version: 7.7.0
   resolution: "@typescript-eslint/utils@npm:7.7.0"
   dependencies:
@@ -2142,7 +2142,7 @@ __metadata:
     debug: "npm:^4.3.4"
     esbuild: "npm:~0.20.2"
     eslint: "npm:^8.57.0"
-    eslint-plugin-vitest: "npm:^0.4.1"
+    eslint-plugin-vitest: "npm:^0.5.3"
     lefthook: "npm:^1.6.10"
     prettier: "npm:^3.2.5"
     typescript: "npm:^5.4.5"
@@ -2407,20 +2407,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vitest@npm:^0.4.1":
-  version: 0.4.1
-  resolution: "eslint-plugin-vitest@npm:0.4.1"
+"eslint-plugin-vitest@npm:^0.5.3":
+  version: 0.5.3
+  resolution: "eslint-plugin-vitest@npm:0.5.3"
   dependencies:
-    "@typescript-eslint/utils": "npm:^7.4.0"
+    "@typescript-eslint/utils": "npm:^7.6.0"
   peerDependencies:
-    eslint: ">=8.0.0"
+    eslint: ^8.57.0 || ^9.0.0
     vitest: "*"
   peerDependenciesMeta:
     "@typescript-eslint/eslint-plugin":
       optional: true
     vitest:
       optional: true
-  checksum: 10c0/d06a7efec259778186526fa3bcf94af1433c145a0388bd6f6f9d9e86e918f9ade906c7c49000252a61ff0d45f44525428e9729c074cb94ce0a7d768f0c990a76
+  checksum: 10c0/c3003d976749536e1cdbbcb0855fd3318ab02451b191e8c858e1e7c4c40c619b854f94d89e30ad603a5ff79ae717ab1d8e1b33d96092899cfc8057fec4c94e21
   languageName: node
   linkType: hard
 
