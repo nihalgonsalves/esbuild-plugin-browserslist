@@ -44,7 +44,7 @@
     "browserslist": "^4.23.0",
     "esbuild": "~0.20.2",
     "eslint": "^8.57.0",
-    "eslint-plugin-vitest": "^0.5.4",
+    "eslint-plugin-vitest": "~0.4.1",
     "lefthook": "^1.6.10",
     "prettier": "^3.2.5",
     "typescript": "^5.4.5",
