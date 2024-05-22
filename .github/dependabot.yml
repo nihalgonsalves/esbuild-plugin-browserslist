@@ -16,6 +16,9 @@ updates:
       - dependency-name: "eslint"
         update-types:
           - "version-update:semver-major"
+      - dependency-name: "eslint-plugin-vitest"
+        update-types:
+          - "version-update:semver-minor"
 
   - package-ecosystem: github-actions
     directory: "/"
