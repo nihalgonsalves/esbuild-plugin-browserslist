@@ -27,7 +27,7 @@
   },
   "peerDependencies": {
     "browserslist": "^4.21.8",
-    "esbuild": "~0.21.4"
+    "esbuild": "~0.21.5"
   },
   "dependencies": {
     "debug": "^4.3.5",
@@ -36,17 +36,17 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "@nihalgonsalves/esconfig": "^0.9.13",
+    "@nihalgonsalves/esconfig": "^0.9.14",
     "@types/debug": "^4.1.12",
     "@types/node": "18",
     "@vitest/coverage-v8": "^1.6.0",
     "@vitest/ui": "^1.6.0",
-    "browserslist": "^4.23.0",
-    "esbuild": "~0.21.4",
+    "browserslist": "^4.23.1",
+    "esbuild": "~0.21.5",
     "eslint": "^8.57.0",
     "eslint-plugin-vitest": "~0.4.1",
     "lefthook": "^1.6.15",
-    "prettier": "^3.3.0",
+    "prettier": "^3.3.1",
     "typescript": "^5.4.5",
     "vitest": "^1.6.0"
   },
