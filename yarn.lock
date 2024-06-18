@@ -763,9 +763,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nihalgonsalves/esconfig@npm:^0.9.14":
-  version: 0.9.14
-  resolution: "@nihalgonsalves/esconfig@npm:0.9.14"
+"@nihalgonsalves/esconfig@npm:^0.9.15":
+  version: 0.9.15
+  resolution: "@nihalgonsalves/esconfig@npm:0.9.15"
   dependencies:
     "@typescript-eslint/eslint-plugin": "npm:^7.12.0"
     "@typescript-eslint/parser": "npm:^7.12.0"
@@ -779,7 +779,7 @@ __metadata:
     eslint: ^8.57.0
     prettier: ^3.3.1
     typescript: ^5.4.3
-  checksum: 10c0/36e69cfbed191298882ff52f8f07f36858557e6be0a31fc6c016d26e213aba8585d4c9ad902feba08704c4813cb6d447feacb0b5db2b5d9f73d11c5091a90183
+  checksum: 10c0/11da508836031c6c71949681390f22f866131df1ad93cfbbe8103be4f8b7eddb4eca5f9467447407de843dba43d228e1f400ae9229c69839d8296a005a63d8ff
   languageName: node
   linkType: hard
 
@@ -998,20 +998,20 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 20.14.2
-  resolution: "@types/node@npm:20.14.2"
+  version: 20.14.3
+  resolution: "@types/node@npm:20.14.3"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/2d86e5f2227aaa42212e82ea0affe72799111b888ff900916376450b02b09b963ca888b20d9c332d8d2b833ed4781987867a38eaa2e4863fa8439071468b0a6f
+  checksum: 10c0/fbd15d63ac64b7d864e7a423c9af4fcc672cc78316c66b764effcf39736f3bac907df491dbd827329492252de08174d877b1855ec6e853e421eb0eeba31737e2
   languageName: node
   linkType: hard
 
 "@types/node@npm:18":
-  version: 18.19.34
-  resolution: "@types/node@npm:18.19.34"
+  version: 18.19.35
+  resolution: "@types/node@npm:18.19.35"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/e985f50684def801801069e236165ee511f9195fc04ad4a2af7642d86aeaeaf7bfe34c147f894a48618a5c71c15b388ca91341a244792149543a712e38351988
+  checksum: 10c0/cb506a28f621e00d93ff5fbe475305d8897facafc66d698f6645d5360995f7c70793c5ac296ba1e94fd8d08fd9a597ccf0808876378eec6bedd96990d1296c6e
   languageName: node
   linkType: hard
 
@@ -2500,7 +2500,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:^19.3.0"
     "@commitlint/config-conventional": "npm:^19.2.2"
-    "@nihalgonsalves/esconfig": "npm:^0.9.14"
+    "@nihalgonsalves/esconfig": "npm:^0.9.15"
     "@types/debug": "npm:^4.1.12"
     "@types/node": "npm:18"
     "@vitest/coverage-v8": "npm:^1.6.0"
@@ -2510,8 +2510,8 @@ __metadata:
     esbuild: "npm:~0.21.5"
     eslint: "npm:^8.57.0"
     eslint-plugin-vitest: "npm:~0.4.1"
-    lefthook: "npm:^1.6.15"
-    prettier: "npm:^3.3.1"
+    lefthook: "npm:^1.6.16"
+    prettier: "npm:^3.3.2"
     typescript: "npm:^5.4.5"
     vitest: "npm:^1.6.0"
     zod: "npm:^3.23.8"
@@ -4178,74 +4178,74 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lefthook-darwin-arm64@npm:1.6.15":
-  version: 1.6.15
-  resolution: "lefthook-darwin-arm64@npm:1.6.15"
+"lefthook-darwin-arm64@npm:1.6.16":
+  version: 1.6.16
+  resolution: "lefthook-darwin-arm64@npm:1.6.16"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"lefthook-darwin-x64@npm:1.6.15":
-  version: 1.6.15
-  resolution: "lefthook-darwin-x64@npm:1.6.15"
+"lefthook-darwin-x64@npm:1.6.16":
+  version: 1.6.16
+  resolution: "lefthook-darwin-x64@npm:1.6.16"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"lefthook-freebsd-arm64@npm:1.6.15":
-  version: 1.6.15
-  resolution: "lefthook-freebsd-arm64@npm:1.6.15"
+"lefthook-freebsd-arm64@npm:1.6.16":
+  version: 1.6.16
+  resolution: "lefthook-freebsd-arm64@npm:1.6.16"
   conditions: os=freebsd & cpu=arm64
   languageName: node
   linkType: hard
 
-"lefthook-freebsd-x64@npm:1.6.15":
-  version: 1.6.15
-  resolution: "lefthook-freebsd-x64@npm:1.6.15"
+"lefthook-freebsd-x64@npm:1.6.16":
+  version: 1.6.16
+  resolution: "lefthook-freebsd-x64@npm:1.6.16"
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
-"lefthook-linux-arm64@npm:1.6.15":
-  version: 1.6.15
-  resolution: "lefthook-linux-arm64@npm:1.6.15"
+"lefthook-linux-arm64@npm:1.6.16":
+  version: 1.6.16
+  resolution: "lefthook-linux-arm64@npm:1.6.16"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"lefthook-linux-x64@npm:1.6.15":
-  version: 1.6.15
-  resolution: "lefthook-linux-x64@npm:1.6.15"
+"lefthook-linux-x64@npm:1.6.16":
+  version: 1.6.16
+  resolution: "lefthook-linux-x64@npm:1.6.16"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"lefthook-windows-arm64@npm:1.6.15":
-  version: 1.6.15
-  resolution: "lefthook-windows-arm64@npm:1.6.15"
+"lefthook-windows-arm64@npm:1.6.16":
+  version: 1.6.16
+  resolution: "lefthook-windows-arm64@npm:1.6.16"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"lefthook-windows-x64@npm:1.6.15":
-  version: 1.6.15
-  resolution: "lefthook-windows-x64@npm:1.6.15"
+"lefthook-windows-x64@npm:1.6.16":
+  version: 1.6.16
+  resolution: "lefthook-windows-x64@npm:1.6.16"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"lefthook@npm:^1.6.15":
-  version: 1.6.15
-  resolution: "lefthook@npm:1.6.15"
+"lefthook@npm:^1.6.16":
+  version: 1.6.16
+  resolution: "lefthook@npm:1.6.16"
   dependencies:
-    lefthook-darwin-arm64: "npm:1.6.15"
-    lefthook-darwin-x64: "npm:1.6.15"
-    lefthook-freebsd-arm64: "npm:1.6.15"
-    lefthook-freebsd-x64: "npm:1.6.15"
-    lefthook-linux-arm64: "npm:1.6.15"
-    lefthook-linux-x64: "npm:1.6.15"
-    lefthook-windows-arm64: "npm:1.6.15"
-    lefthook-windows-x64: "npm:1.6.15"
+    lefthook-darwin-arm64: "npm:1.6.16"
+    lefthook-darwin-x64: "npm:1.6.16"
+    lefthook-freebsd-arm64: "npm:1.6.16"
+    lefthook-freebsd-x64: "npm:1.6.16"
+    lefthook-linux-arm64: "npm:1.6.16"
+    lefthook-linux-x64: "npm:1.6.16"
+    lefthook-windows-arm64: "npm:1.6.16"
+    lefthook-windows-x64: "npm:1.6.16"
   dependenciesMeta:
     lefthook-darwin-arm64:
       optional: true
@@ -4265,7 +4265,7 @@ __metadata:
       optional: true
   bin:
     lefthook: bin/index.js
-  checksum: 10c0/582e4ab1f0b3e28cfbc9e773e0027e78c9660448e098740363611873495f127ce0f04efaafbee88425c6a8b88a1f4fe2b0bbe335ac59a8c65705098ba0e68112
+  checksum: 10c0/1199bff516aafd31edac387abe9978b12278aec90903764dfc54fee4487cbe2f46481bd7095ecf5554a1c8fd103686ce74797c7e3777b38a7e0776122f586df3
   languageName: node
   linkType: hard
 
@@ -5101,12 +5101,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.3.1":
-  version: 3.3.1
-  resolution: "prettier@npm:3.3.1"
+"prettier@npm:^3.3.2":
+  version: 3.3.2
+  resolution: "prettier@npm:3.3.2"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 10c0/c25a709c9f0be670dc6bcb190b622347e1dbeb6c3e7df8b0711724cb64d8647c60b839937a4df4df18e9cfb556c2b08ca9d24d9645eb5488a7fc032a2c4d5cb3
+  checksum: 10c0/39ed27d17f0238da6dd6571d63026566bd790d3d0edac57c285fbab525982060c8f1e01955fe38134ab10f0951a6076da37f015db8173c02f14bc7f0803a384c
   languageName: node
   linkType: hard
 
