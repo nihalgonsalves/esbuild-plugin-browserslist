@@ -1,12 +1,10 @@
 {
-  "extends": "@nihalgonsalves/esconfig",
+  "extends": "@nihalgonsalves/esconfig/tsconfig.shared.json",
   "compilerOptions": {
-    "module": "ES2022",
-    "moduleResolution": "Bundler",
-    "target": "ES2022",
     "noEmit": true,
     "skipLibCheck": true,
-    "verbatimModuleSyntax": false
+    "verbatimModuleSyntax": false,
+    "allowJs": true
   },
-  "include": ["./src/", "./vitest.config.ts"]
+  "include": ["src/", "vitest.config.ts", "eslint.config.mjs"]
 }
