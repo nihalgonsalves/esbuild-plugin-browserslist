@@ -17,6 +17,7 @@ jobs:
       - run: yarn typecheck
       - run: yarn build
       - run: yarn test
+      - run: yarn lint
 
       - name: test built package on node@22
         working-directory: ./package-test/

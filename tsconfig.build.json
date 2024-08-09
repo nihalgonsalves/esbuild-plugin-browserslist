@@ -6,6 +6,7 @@
     "declaration": true,
     "noEmit": false,
     "incremental": false,
+    "rootDir": "./src/",
     "outDir": "./dist/"
   },
   "include": ["./src/"],
