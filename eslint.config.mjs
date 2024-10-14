@@ -6,12 +6,17 @@ import tseslint from "typescript-eslint";
 import sharedConfig from "@nihalgonsalves/esconfig/eslint.config.shared.js";
 
 export default tseslint.config(
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   includeIgnoreFile(new URL("./.gitignore", import.meta.url).pathname),
   { ignores: ["package-test", "dist"] },
   ...sharedConfig,
   {
     plugins: { vitest },
     rules: vitest.configs.recommended.rules,
+  },
+  {
+    files: ["**/*.config.*"],
+    rules: {
+      "import/no-default-export": "off",
+    },
   },
 );
