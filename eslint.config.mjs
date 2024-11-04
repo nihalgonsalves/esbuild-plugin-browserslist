@@ -13,10 +13,4 @@ export default tseslint.config(
     plugins: { vitest },
     rules: vitest.configs.recommended.rules,
   },
-  {
-    files: ["**/*.config.*"],
-    rules: {
-      "import/no-default-export": "off",
-    },
-  },
 );
