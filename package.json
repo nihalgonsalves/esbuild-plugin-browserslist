@@ -40,18 +40,18 @@
     "@nihalgonsalves/esconfig": "^0.10.16",
     "@types/debug": "^4.1.12",
     "@types/node": "18",
-    "@vitest/coverage-v8": "^2.1.5",
-    "@vitest/ui": "^2.1.5",
+    "@vitest/coverage-v8": "^2.1.8",
+    "@vitest/ui": "^2.1.8",
     "browserslist": "^4.24.2",
     "esbuild": "~0.24.0",
-    "eslint": "^9.15.0",
+    "eslint": "^9.16.0",
     "eslint-plugin-vitest": "^0.5.4",
-    "knip": "^5.37.2",
-    "lefthook": "^1.8.4",
-    "prettier": "^3.3.3",
+    "knip": "^5.39.0",
+    "lefthook": "^1.8.5",
+    "prettier": "^3.4.1",
     "typescript": "^5.7.2",
-    "typescript-eslint": "^8.16.0",
-    "vitest": "^2.1.5"
+    "typescript-eslint": "^8.17.0",
+    "vitest": "^2.1.8"
   },
   "packageManager": "yarn@4.5.1+sha512.341db9396b6e289fecc30cd7ab3af65060e05ebff4b3b47547b278b9e67b08f485ecd8c79006b405446262142c7a38154445ef7f17c1d5d1de7d90bf9ce7054d"
 }
