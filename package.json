@@ -31,26 +31,26 @@
   },
   "dependencies": {
     "debug": "^4.4.0",
-    "zod": "^3.23.8"
+    "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.6.0",
+    "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
     "@eslint/compat": "^1.2.4",
-    "@nihalgonsalves/esconfig": "^0.10.16",
+    "@nihalgonsalves/esconfig": "^0.10.17",
     "@types/debug": "^4.1.12",
     "@types/node": "18",
     "@vitest/coverage-v8": "^2.1.8",
     "@vitest/ui": "^2.1.8",
-    "browserslist": "^4.24.2",
+    "browserslist": "^4.24.3",
     "esbuild": "~0.24.0",
-    "eslint": "^9.16.0",
+    "eslint": "^9.17.0",
     "eslint-plugin-vitest": "^0.5.4",
-    "knip": "^5.39.2",
-    "lefthook": "^1.9.0",
+    "knip": "^5.41.0",
+    "lefthook": "^1.9.2",
     "prettier": "^3.4.2",
     "typescript": "^5.7.2",
-    "typescript-eslint": "^8.18.0",
+    "typescript-eslint": "^8.18.1",
     "vitest": "^2.1.8"
   },
   "packageManager": "yarn@4.5.1+sha512.341db9396b6e289fecc30cd7ab3af65060e05ebff4b3b47547b278b9e67b08f485ecd8c79006b405446262142c7a38154445ef7f17c1d5d1de7d90bf9ce7054d"
