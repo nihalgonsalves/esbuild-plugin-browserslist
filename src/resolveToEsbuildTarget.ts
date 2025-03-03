@@ -1,7 +1,10 @@
 import { z } from "zod";
 
-import { BrowserslistEsbuildMapping, BrowserslistKind } from "./types";
-import type { EsbuildEngine } from "./types";
+import {
+  BrowserslistEsbuildMapping,
+  BrowserslistKind,
+  type EsbuildEngine,
+} from "./types";
 import { dbg } from "./util";
 
 const BrowserSchema = z.nativeEnum(BrowserslistKind);
