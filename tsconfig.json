@@ -2,9 +2,8 @@
   "extends": "@nihalgonsalves/esconfig/tsconfig.shared.json",
   "compilerOptions": {
     "noEmit": true,
-    "skipLibCheck": true,
     "verbatimModuleSyntax": false,
-    "allowJs": true
+    "erasableSyntaxOnly": false
   },
   "include": ["src/", "vitest.config.ts", "eslint.config.mjs"]
 }

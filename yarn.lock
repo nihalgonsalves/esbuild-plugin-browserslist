@@ -825,9 +825,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nihalgonsalves/esconfig@npm:^0.10.26":
-  version: 0.10.26
-  resolution: "@nihalgonsalves/esconfig@npm:0.10.26"
+"@nihalgonsalves/esconfig@npm:^0.11.0":
+  version: 0.11.0
+  resolution: "@nihalgonsalves/esconfig@npm:0.11.0"
   dependencies:
     "@eslint/js": "npm:^9.22.0"
     eslint-config-prettier: "npm:^10.1.1"
@@ -840,7 +840,7 @@ __metadata:
     eslint: ^9.17.0
     typescript: ^5.5.4
     typescript-eslint: ^8.4.0
-  checksum: 10c0/52cf6cc3a1757648ad9210f7ec7ae22fcfacec5d0f95dc7e55edbca09074d9018c6262f0d81307e27ec2d1613d8680147bd9aa168120d23736f838dca0f37e68
+  checksum: 10c0/8fc556357cd2daffa1c6cf9d6accae6758da3df30eccd29e7cd72cb03240f788b501e061602045fadbd28292e04499c8f6b9a7d054a3be59e6dcde288da5892f
   languageName: node
   linkType: hard
 
@@ -2555,7 +2555,7 @@ __metadata:
     "@commitlint/cli": "npm:^19.8.0"
     "@commitlint/config-conventional": "npm:^19.8.0"
     "@eslint/compat": "npm:^1.2.7"
-    "@nihalgonsalves/esconfig": "npm:^0.10.26"
+    "@nihalgonsalves/esconfig": "npm:^0.11.0"
     "@types/debug": "npm:^4.1.12"
     "@types/node": "npm:22"
     "@vitest/coverage-v8": "npm:^3.0.8"
