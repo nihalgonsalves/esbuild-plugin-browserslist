@@ -1,8 +1,8 @@
 import browserslist from "browserslist";
 import { describe, it } from "vitest";
 
-import { resolveToEsbuildTarget } from "./resolveToEsbuildTarget";
-import { EsbuildEngine } from "./types";
+import { resolveToEsbuildTarget } from "./resolveToEsbuildTarget.js";
+import { EsbuildEngine } from "./types.js";
 
 const useLogs = () => {
   const logs: string[] = [];

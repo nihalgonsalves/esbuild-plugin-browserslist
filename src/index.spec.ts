@@ -7,7 +7,7 @@ import browserslist from "browserslist";
 import * as esbuild from "esbuild";
 import { vi, describe, it } from "vitest";
 
-import { esbuildPluginBrowserslist } from ".";
+import { esbuildPluginBrowserslist } from "./index.js";
 
 const getFile = async (
   input: string,
