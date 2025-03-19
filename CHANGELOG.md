@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/esbuild-plugin-browserslist-v0.16.0...esbuild-plugin-browserslist-v1.0.0) (2025-03-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* This drops support for Node 18, and switches to a pure ESM package. This means that you either have to use `"type": "module"` in your `package.json`, or upgrade to a Node version that supports [require(esm)](https://nodejs.org/api/modules.html#loading-ecmascript-modules-using-require), i.e. >= [v20.19.0](https://nodejs.org/en/blog/release/v20.19.0#requireesm-is-now-enabled-by-default), >= [v22.12.0](https://nodejs.org/en/blog/release/v22.12.0#requireesm-is-now-enabled-by-default), or v23 and above.
+
+### Build System
+
+* switch to esm ([#240](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/issues/240)) ([0a095a8](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/commit/0a095a86ebb00a873264ab8dc358e7e49801b07b))
+
 ## [0.16.0](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/esbuild-plugin-browserslist-v0.15.0...esbuild-plugin-browserslist-v0.16.0) (2025-02-10)
 
 
