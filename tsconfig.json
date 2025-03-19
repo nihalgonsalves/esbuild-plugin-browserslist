@@ -1,9 +1,14 @@
 {
   "extends": "@nihalgonsalves/esconfig/tsconfig.shared.json",
   "compilerOptions": {
+    // https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping
+    "lib": ["ES2023"],
+    "target": "ES2023",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "noEmit": true,
-    "verbatimModuleSyntax": false,
-    "erasableSyntaxOnly": false
+    "erasableSyntaxOnly": false,
+    "types": ["node"]
   },
-  "include": ["src/", "vitest.config.ts", "eslint.config.mjs"]
+  "include": ["src/", "vitest.config.ts", "eslint.config.js"]
 }

@@ -41,13 +41,3 @@ jobs:
           node -v
           node test.cjs
           node test.mjs
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18
-      - name: test build package on node@18
-        working-directory: ./package-test/
-        run: |
-          node -v
-          node test.cjs
-          node test.mjs

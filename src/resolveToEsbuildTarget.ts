@@ -4,8 +4,8 @@ import {
   BrowserslistEsbuildMapping,
   BrowserslistKind,
   type EsbuildEngine,
-} from "./types";
-import { dbg } from "./util";
+} from "./types.js";
+import { dbg } from "./util.js";
 
 const BrowserSchema = z.nativeEnum(BrowserslistKind);
 /** 123 or 123.456 or 123.456.789 */

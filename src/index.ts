@@ -1,7 +1,7 @@
 import type { Plugin } from "esbuild";
 
-import { resolveToEsbuildTarget as resolveToEsbuildTarget_ } from "./resolveToEsbuildTarget";
-import { dbg, log, PLUGIN_NAME } from "./util";
+import { resolveToEsbuildTarget as resolveToEsbuildTarget_ } from "./resolveToEsbuildTarget.js";
+import { dbg, log, PLUGIN_NAME } from "./util.js";
 
 export type Opts = { printUnknownTargets: boolean };
 
