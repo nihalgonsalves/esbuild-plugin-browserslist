@@ -9,6 +9,7 @@
     "url": "https://github.com/nihalgonsalves/esbuild-plugin-browserslist.git"
   },
   "license": "MIT",
+  "main": "./dist/index.js",
   "exports": {
     "types": "./dist/index.d.ts",
     "default": "./dist/index.js"
