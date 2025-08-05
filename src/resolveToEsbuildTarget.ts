@@ -7,7 +7,7 @@ import {
 } from "./types.js";
 import { dbg } from "./util.js";
 
-const BrowserSchema = z.nativeEnum(BrowserslistKind);
+const BrowserSchema = z.enum(BrowserslistKind);
 /** 123 or 123.456 or 123.456.789 */
 const VersionSchema = z.string().regex(/^(\d+\.\d+\.\d+|\d+\.\d+|\d+)$/);
 
