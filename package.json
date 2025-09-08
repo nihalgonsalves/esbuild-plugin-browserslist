@@ -48,13 +48,13 @@
     "@vitest/ui": "^3.2.4",
     "browserslist": "^4.25.4",
     "esbuild": "~0.25.9",
-    "eslint": "^9.34.0",
+    "eslint": "^9.35.0",
     "eslint-plugin-vitest": "^0.5.4",
-    "knip": "^5.63.0",
-    "lefthook": "^1.12.3",
+    "knip": "^5.63.1",
+    "lefthook": "^1.12.4",
     "prettier": "^3.6.2",
     "typescript": "^5.9.2",
-    "typescript-eslint": "^8.41.0",
+    "typescript-eslint": "^8.43.0",
     "vitest": "^3.2.4"
   },
   "packageManager": "yarn@4.9.2+sha512.1fc009bc09d13cfd0e19efa44cbfc2b9cf6ca61482725eb35bbc5e257e093ebf4130db6dfe15d604ff4b79efd8e1e8e99b25fa7d0a6197c9f9826358d4d65c3c"
