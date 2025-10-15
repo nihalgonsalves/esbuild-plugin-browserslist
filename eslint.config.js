@@ -1,11 +1,11 @@
 import { includeIgnoreFile } from "@eslint/compat";
+import { defineConfig } from "eslint/config";
 import vitest from "eslint-plugin-vitest";
-import tseslint from "typescript-eslint";
 
 // eslint-disable-next-line import/extensions
 import sharedConfig from "@nihalgonsalves/esconfig/eslint.config.shared.js";
 
-export default tseslint.config(
+export default defineConfig(
   includeIgnoreFile(new URL("./.gitignore", import.meta.url).pathname),
   { ignores: ["package-test", "dist"] },
   ...sharedConfig,
