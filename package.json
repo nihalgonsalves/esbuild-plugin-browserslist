@@ -30,8 +30,8 @@
     "prepublishOnly": "yarn build && yarn lint && yarn test"
   },
   "peerDependencies": {
-    "browserslist": "^4.21.8",
-    "esbuild": "~0.25.10"
+    "browserslist": "^4.28.0",
+    "esbuild": "~0.27.0"
   },
   "dependencies": {
     "debug": "^4.4.3",
@@ -47,7 +47,7 @@
     "@vitest/coverage-v8": "^4.0.8",
     "@vitest/ui": "^4.0.8",
     "browserslist": "^4.28.0",
-    "esbuild": "~0.25.12",
+    "esbuild": "~0.27.0",
     "eslint": "^9.39.1",
     "eslint-plugin-vitest": "^0.5.4",
     "knip": "^5.69.0",
