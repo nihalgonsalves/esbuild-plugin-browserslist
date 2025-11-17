@@ -40,22 +40,22 @@
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
-    "@eslint/compat": "^1.4.1",
-    "@nihalgonsalves/esconfig": "^0.12.1",
+    "@eslint/compat": "^2.0.0",
+    "@nihalgonsalves/esconfig": "^0.13.0",
     "@types/debug": "^4.1.12",
     "@types/node": "22",
-    "@vitest/coverage-v8": "^4.0.8",
-    "@vitest/ui": "^4.0.8",
+    "@vitest/coverage-v8": "^4.0.10",
+    "@vitest/ui": "^4.0.10",
     "browserslist": "^4.28.0",
     "esbuild": "~0.27.0",
     "eslint": "^9.39.1",
     "eslint-plugin-vitest": "^0.5.4",
-    "knip": "^5.69.0",
-    "lefthook": "^2.0.3",
+    "knip": "^5.69.1",
+    "lefthook": "^2.0.4",
     "prettier": "^3.6.2",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.4",
-    "vitest": "^4.0.8"
+    "typescript-eslint": "^8.47.0",
+    "vitest": "^4.0.10"
   },
   "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f"
 }
