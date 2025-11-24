@@ -28,10 +28,10 @@ jobs:
       name: NPM
       url: https://www.npmjs.com/package/esbuild-plugin-browserslist/v/${{ needs.release.outputs.version }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       # waiting on: https://github.com/actions/setup-node/issues/531
       - run: corepack enable
       - uses: actions/setup-node@v6
