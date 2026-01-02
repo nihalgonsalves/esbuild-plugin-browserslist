@@ -50,11 +50,11 @@
     "esbuild": "~0.27.2",
     "eslint": "^9.39.2",
     "eslint-plugin-vitest": "^0.5.4",
-    "knip": "^5.76.3",
-    "lefthook": "^2.0.12",
+    "knip": "^5.78.0",
+    "lefthook": "^2.0.13",
     "prettier": "^3.7.4",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.50.1",
+    "typescript-eslint": "^8.51.0",
     "vitest": "^4.0.16"
   },
   "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f"
