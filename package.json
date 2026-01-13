@@ -38,24 +38,24 @@
     "zod": "^4.3.5"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.3.0",
-    "@commitlint/config-conventional": "^20.3.0",
-    "@eslint/compat": "^2.0.0",
+    "@commitlint/cli": "^20.3.1",
+    "@commitlint/config-conventional": "^20.3.1",
+    "@eslint/compat": "^2.0.1",
     "@nihalgonsalves/esconfig": "^0.13.3",
     "@types/debug": "^4.1.12",
     "@types/node": "22",
-    "@vitest/coverage-v8": "^4.0.16",
-    "@vitest/ui": "^4.0.16",
+    "@vitest/coverage-v8": "^4.0.17",
+    "@vitest/ui": "^4.0.17",
     "browserslist": "^4.28.1",
     "esbuild": "~0.27.2",
     "eslint": "^9.39.2",
     "eslint-plugin-vitest": "^0.5.4",
-    "knip": "^5.80.0",
-    "lefthook": "^2.0.13",
+    "knip": "^5.80.2",
+    "lefthook": "^2.0.14",
     "prettier": "^3.7.4",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.52.0",
-    "vitest": "^4.0.16"
+    "typescript-eslint": "^8.53.0",
+    "vitest": "^4.0.17"
   },
   "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f"
 }
