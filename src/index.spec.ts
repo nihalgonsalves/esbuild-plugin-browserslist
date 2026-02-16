@@ -9,9 +9,7 @@ import { vi, describe, it } from "vitest";
 
 import { esbuildPluginBrowserslist } from "./index.js";
 
-const getFile = async (
-  input: string,
-): Promise<{ entryPoint: string; outfile: string }> => {
+const getFile = async (input: string): Promise<{ entryPoint: string; outfile: string }> => {
   const randomString = crypto.randomBytes(16).toString("hex");
   const entryPoint = path.join(os.tmpdir(), `${randomString}.js`);
   const outfile = path.join(os.tmpdir(), `${randomString}-out.js`);
@@ -76,9 +74,7 @@ describe.concurrent("esbuild-plugin-browserslist", () => {
           ],
         });
 
-        expect(await fs.promises.readFile(outfile, "utf8")).toBe(
-          `${expectedOutput}\n`,
-        );
+        expect(await fs.promises.readFile(outfile, "utf8")).toBe(`${expectedOutput}\n`);
       }),
     );
   });

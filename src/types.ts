@@ -48,9 +48,7 @@ export enum EsbuildEngine {
   Safari = "safari",
 }
 
-export const BrowserslistEsbuildMapping: Partial<
-  Record<BrowserslistKind, EsbuildEngine>
-> = {
+export const BrowserslistEsbuildMapping: Partial<Record<BrowserslistKind, EsbuildEngine>> = {
   // exact map
   [BrowserslistKind.Edge]: EsbuildEngine.Edge,
   [BrowserslistKind.Firefox]: EsbuildEngine.Firefox,

@@ -43,9 +43,9 @@ describe.concurrent("resolveToEsbuildTarget", () => {
 
     const query = ["ie_mob 11"];
 
-    expect(() =>
-      resolveToEsbuildTarget(browserslist(query, {}), logFn),
-    ).toThrow(/Could not resolve/);
+    expect(() => resolveToEsbuildTarget(browserslist(query, {}), logFn)).toThrow(
+      /Could not resolve/,
+    );
 
     expect(logs).toMatchInlineSnapshot(`
       [

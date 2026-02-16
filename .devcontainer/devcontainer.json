@@ -5,9 +5,9 @@
   },
   "customizations": {
     "vscode": {
-      "extensions": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"]
+      "extensions": ["oxc.oxc-vscode", "dbaeumer.vscode-eslint"]
     }
   },
-  "onCreateCommand": "yarn install",
+  "onCreateCommand": "pnpm install",
   "remoteUser": "node"
 }

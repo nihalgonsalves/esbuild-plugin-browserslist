@@ -1,10 +1,6 @@
 import { z } from "zod";
 
-import {
-  BrowserslistEsbuildMapping,
-  BrowserslistKind,
-  type EsbuildEngine,
-} from "./types.js";
+import { BrowserslistEsbuildMapping, BrowserslistKind, type EsbuildEngine } from "./types.js";
 import { dbg } from "./util.js";
 
 const BrowserSchema = z.enum(BrowserslistKind);
@@ -37,9 +33,7 @@ export const resolveToEsbuildTarget = (
       });
 
       if (!browserResult.success || !versionResult.success) {
-        logFn(
-          `Could not parse Browserslist result to a meaningful format. entry=${entry}`,
-        );
+        logFn(`Could not parse Browserslist result to a meaningful format. entry=${entry}`);
         return undefined;
       }
 
@@ -51,9 +45,7 @@ export const resolveToEsbuildTarget = (
       dbg("Got target for entry=%s: %s", entry, esbuildTarget);
 
       if (esbuildTarget === undefined) {
-        logFn(
-          `Skipping unknown target: entry=${entry}, browser=${browser}, version=${version}`,
-        );
+        logFn(`Skipping unknown target: entry=${entry}, browser=${browser}, version=${version}`);
         return undefined;
       }
 

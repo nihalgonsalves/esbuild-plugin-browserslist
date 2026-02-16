@@ -1,37 +1,33 @@
 {
   "name": "esbuild-plugin-browserslist",
-  "type": "module",
-  "description": "Configure esbuild's target based on a browserslist query",
   "version": "2.0.0",
+  "description": "Configure esbuild's target based on a browserslist query",
+  "license": "MIT",
   "author": "Nihal Gonsalves <nihal@nihalgonsalves.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/nihalgonsalves/esbuild-plugin-browserslist.git"
   },
-  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
   "main": "./dist/index.js",
   "exports": {
     "types": "./dist/index.d.ts",
     "default": "./dist/index.js"
   },
-  "engines": {
-    "node": "^20.19.0 || ^22.12.0 || >23.0.0"
+  "publishConfig": {
+    "provenance": true
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "typecheck": "tsc",
     "build": "rm -rf dist && tsc --project tsconfig.build.json",
     "test": "vitest",
     "lint": "eslint",
-    "format": "prettier . --write",
-    "format:check": "prettier . --check",
-    "prepublishOnly": "yarn build && yarn lint && yarn test"
-  },
-  "peerDependencies": {
-    "browserslist": "^4.28.1",
-    "esbuild": "~0.27.3"
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "prepublishOnly": "node --run build && node --run lint && node --run test -- --no-watch"
   },
   "dependencies": {
     "debug": "^4.4.3",
@@ -52,10 +48,17 @@
     "eslint-plugin-vitest": "^0.5.4",
     "knip": "^5.83.1",
     "lefthook": "^2.1.1",
-    "prettier": "^3.8.1",
+    "oxfmt": "^0.33.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.56.0",
     "vitest": "^4.0.18"
   },
-  "packageManager": "yarn@4.12.0+sha512.f45ab632439a67f8bc759bf32ead036a1f413287b9042726b7cc4818b7b49e14e9423ba49b18f9e06ea4941c1ad062385b1d8760a8d5091a1a31e5f6219afca8"
+  "peerDependencies": {
+    "browserslist": "^4.28.1",
+    "esbuild": "~0.27.3"
+  },
+  "engines": {
+    "node": "^20.19.0 || ^22.12.0 || >23.0.0"
+  },
+  "packageManager": "pnpm@10.29.3+sha512.498e1fb4cca5aa06c1dcf2611e6fafc50972ffe7189998c409e90de74566444298ffe43e6cd2acdc775ba1aa7cc5e092a8b7054c811ba8c5770f84693d33d2dc"
 }

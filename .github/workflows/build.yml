@@ -9,21 +9,18 @@ jobs:
       - run: corepack enable
       - uses: actions/setup-node@v6
         with:
-          node-version: 22
-          cache: yarn
-      - run: yarn install --immutable
-      - run: yarn format:check
-      - run: yarn lint
-      - run: yarn typecheck
-      - run: yarn build
-      - run: yarn test
-      - run: yarn lint
-
-      - name: test built package on node@22
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm format:check
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm build
+      - run: pnpm test
+      - name: test built package on node@24
         working-directory: ./package-test/
         run: |
-          # CI implies --immutable
-          yarn install --no-immutable
+          pnpm install --frozen-lockfile
 
           node -v
           node test.cjs
@@ -31,6 +28,16 @@ jobs:
 
       # Not using a matrix here since it's simpler
       # to just duplicate it and not spawn new instances
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - name: test build package on node@20
+        working-directory: ./package-test/
+        run: |
+          node -v
+          node test.cjs
+          node test.mjs
 
       - uses: actions/setup-node@v6
         with:

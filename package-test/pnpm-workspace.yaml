@@ -1,0 +1,3 @@
+blockExoticSubdeps: true
+
+strictDepBuilds: true

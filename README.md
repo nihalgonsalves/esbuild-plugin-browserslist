@@ -7,7 +7,7 @@ Configure [esbuild](https://github.com/evanw/esbuild)'s target based on a [brows
 ## Installation
 
 ```sh
-yarn add esbuild-plugin-browserslist esbuild browserslist
+npm install --save-dev esbuild-plugin-browserslist esbuild browserslist
 ```
 
 ## Usage
@@ -15,10 +15,7 @@ yarn add esbuild-plugin-browserslist esbuild browserslist
 ```ts
 import esbuild from "esbuild";
 import browserslist from "browserslist";
-import {
-  esbuildPluginBrowserslist,
-  resolveToEsbuildTarget,
-} from "esbuild-plugin-browserslist";
+import { esbuildPluginBrowserslist, resolveToEsbuildTarget } from "esbuild-plugin-browserslist";
 
 await esbuild.build({
   entryPoints: ["./foo/bar.ts"],
