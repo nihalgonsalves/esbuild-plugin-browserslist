@@ -12,9 +12,9 @@ pre-commit:
       glob: "*.{js,ts,jsx,tsx,mjs,mts,cjs,cts,json,yml,yaml,md}"
       run: pnpm oxfmt --no-error-on-unmatched-pattern {staged_files}
       stage_fixed: true
-    eslint:
+    oxlint:
       glob: "*.{js,ts,jsx,tsx,mjs,mts,cjs,cts}"
-      run: pnpm eslint --no-warn-ignored --fix {staged_files}
+      run: pnpm oxlint --type-aware --fix {staged_files}
       stage_fixed: true
     typescript-build:
       glob: "*.{js,ts,jsx,tsx,mjs,mts,cjs,cts}"

@@ -1,3 +1,5 @@
+// oxlint-disable typescript/no-require-imports
+
 const {
   esbuildPluginBrowserslist,
   resolveToEsbuildTarget,

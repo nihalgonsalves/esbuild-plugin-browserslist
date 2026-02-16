@@ -3,9 +3,10 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.oxc": "explicit"
   },
+  "oxc.typeAware": true,
   "yaml.schemas": {
-    "https://json.schemastore.org/lefthook.json": ["lefthook.yml", "lefthook-local.yml"]
+    "node_modules/lefthook/schema.json": ["lefthook.yml", "lefthook-local.yml"]
   }
 }

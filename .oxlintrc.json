@@ -1,0 +1,9 @@
+{
+  "extends": ["node_modules/@nihalgonsalves/esconfig/.oxlintrc.json"],
+  "overrides": [
+    {
+      "files": ["**/*.spec.ts"],
+      "plugins": ["vitest"]
+    }
+  ]
+}

@@ -13,7 +13,6 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm format:check
-      - run: pnpm lint
       - run: pnpm typecheck
       - run: pnpm build
       - run: pnpm test
@@ -25,6 +24,10 @@ jobs:
           node -v
           node test.cjs
           node test.mjs
+
+      # lint comes after because the package-test directory needs to be
+      # installed for the type-aware linting to work
+      - run: pnpm lint
 
       # Not using a matrix here since it's simpler
       # to just duplicate it and not spawn new instances

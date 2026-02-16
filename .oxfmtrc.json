@@ -1,3 +1,21 @@
 {
-  "ignorePatterns": ["CHANGELOG.md"]
+  "ignorePatterns": ["CHANGELOG.md"],
+  "experimentalSortPackageJson": true,
+  "experimentalSortImports": {
+    "customGroups": [
+      {
+        "groupName": "org-scope",
+        "elementNamePattern": ["@nihalgonsalves"]
+      }
+    ],
+    "groups": [
+      ["builtin"],
+      ["external", "type-external"],
+      ["org-scope"],
+      ["internal", "type-internal"],
+      ["parent", "type-parent"],
+      ["sibling", "type-sibling"],
+      ["index", "type-index"]
+    ]
+  }
 }
