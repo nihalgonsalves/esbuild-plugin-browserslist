@@ -1,7 +1,7 @@
 {
   "ignorePatterns": ["CHANGELOG.md"],
-  "experimentalSortPackageJson": true,
-  "experimentalSortImports": {
+  "sortPackageJson": true,
+  "sortImports": {
     "customGroups": [
       {
         "groupName": "org-scope",

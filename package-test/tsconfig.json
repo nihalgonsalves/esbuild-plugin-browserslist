@@ -1,0 +1,9 @@
+{
+  "extends": "@nihalgonsalves/esconfig/tsconfig.shared.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "noEmit": true
+  }
+}
