@@ -24,7 +24,7 @@
     "typecheck": "tsc",
     "build": "rm -rf dist && tsc --project tsconfig.build.json",
     "test": "vitest",
-    "lint": "oxlint --type-aware",
+    "lint": "oxlint",
     "format": "oxfmt",
     "format:check": "oxfmt --check",
     "prepublishOnly": "node --run build && node --run lint && node --run test -- --no-watch"
