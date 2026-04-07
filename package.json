@@ -36,27 +36,27 @@
   "devDependencies": {
     "@commitlint/cli": "^20.5.0",
     "@commitlint/config-conventional": "^20.5.0",
-    "@nihalgonsalves/esconfig": "^0.17.0",
+    "@nihalgonsalves/esconfig": "^0.17.2",
     "@types/debug": "^4.1.13",
     "@types/node": "^22",
-    "@vitest/coverage-v8": "^4.1.2",
-    "@vitest/ui": "^4.1.2",
-    "browserslist": "^4.28.1",
-    "esbuild": "~0.27.4",
-    "knip": "^6.1.0",
-    "lefthook": "^2.1.4",
-    "oxfmt": "^0.42.0",
-    "oxlint": "^1.57.0",
-    "oxlint-tsgolint": "^0.18.1",
+    "@vitest/coverage-v8": "^4.1.4",
+    "@vitest/ui": "^4.1.4",
+    "browserslist": "^4.28.2",
+    "esbuild": "~0.28.0",
+    "knip": "^6.4.1",
+    "lefthook": "^2.1.6",
+    "oxfmt": "^0.45.0",
+    "oxlint": "^1.60.0",
+    "oxlint-tsgolint": "^0.21.1",
     "typescript": "^6.0.2",
-    "vitest": "^4.1.2"
+    "vitest": "^4.1.4"
   },
   "peerDependencies": {
-    "browserslist": "^4.28.1",
-    "esbuild": "~0.27.4"
+    "browserslist": "^4.28.2",
+    "esbuild": "~0.28.0"
   },
   "engines": {
     "node": "^20.19.0 || ^22.12.0 || >23.0.0"
   },
-  "packageManager": "pnpm@10.29.3+sha512.498e1fb4cca5aa06c1dcf2611e6fafc50972ffe7189998c409e90de74566444298ffe43e6cd2acdc775ba1aa7cc5e092a8b7054c811ba8c5770f84693d33d2dc"
+  "packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319"
 }
