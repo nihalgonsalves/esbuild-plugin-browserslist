@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.2](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/esbuild-plugin-browserslist-v3.0.1...esbuild-plugin-browserslist-v3.0.2) (2026-04-16)
+
+
+### Bug Fixes
+
+* update publish step again ([543aed0](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/commit/543aed0a957110c66195fbdd9d4699a24c52f924))
+
 ## [3.0.1](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/esbuild-plugin-browserslist-v3.0.0...esbuild-plugin-browserslist-v3.0.1) (2026-04-16)
 
 
