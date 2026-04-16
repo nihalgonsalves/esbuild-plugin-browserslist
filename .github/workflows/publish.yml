@@ -40,4 +40,14 @@ jobs:
           registry-url: "https://registry.npmjs.org"
           cache: "pnpm"
       - run: pnpm install --frozen-lockfile
+      - name: test built package
+        working-directory: ./package-test/
+        run: |
+          pnpm install --frozen-lockfile
+
+          node -v
+          node test.cjs
+          node test.mjs
+      # note: the package-test directory needs to be installed ^^^
+      # for the type-aware linting (part of prepublishOnly) to work
       - run: pnpm publish --access public
