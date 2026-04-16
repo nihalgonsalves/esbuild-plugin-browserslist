@@ -1,6 +1,6 @@
 {
   "name": "esbuild-plugin-browserslist",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Configure esbuild's target based on a browserslist query",
   "license": "MIT",
   "author": "Nihal Gonsalves <nihal@nihalgonsalves.com>",
