@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/esbuild-plugin-browserslist-v3.0.2...esbuild-plugin-browserslist-v4.0.0) (2026-05-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* Dropped support for Node 20 – EOL as of last month
+
+### Miscellaneous Chores
+
+* drop support for EOL node 20 ([e513817](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/commit/e5138177b2ad7c2325a60160501c4be2a533a1d3))
+
 ## [3.0.2](https://github.com/nihalgonsalves/esbuild-plugin-browserslist/compare/esbuild-plugin-browserslist-v3.0.1...esbuild-plugin-browserslist-v3.0.2) (2026-04-16)
 
 
