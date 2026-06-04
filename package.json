@@ -34,22 +34,22 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "^21.0.1",
-    "@commitlint/config-conventional": "^21.0.1",
-    "@nihalgonsalves/esconfig": "^0.17.3",
+    "@commitlint/cli": "^21.0.2",
+    "@commitlint/config-conventional": "^21.0.2",
+    "@nihalgonsalves/esconfig": "^0.17.4",
     "@types/debug": "^4.1.13",
     "@types/node": "^22",
-    "@vitest/coverage-v8": "^4.1.7",
-    "@vitest/ui": "^4.1.7",
+    "@vitest/coverage-v8": "^4.1.8",
+    "@vitest/ui": "^4.1.8",
     "browserslist": "^4.28.2",
     "esbuild": "~0.28.0",
-    "knip": "^6.14.2",
-    "lefthook": "^2.1.8",
-    "oxfmt": "^0.52.0",
-    "oxlint": "^1.67.0",
+    "knip": "^6.15.0",
+    "lefthook": "^2.1.9",
+    "oxfmt": "^0.53.0",
+    "oxlint": "^1.68.0",
     "oxlint-tsgolint": "^0.23.0",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.7"
+    "vitest": "^4.1.8"
   },
   "peerDependencies": {
     "browserslist": "^4.28.2",
