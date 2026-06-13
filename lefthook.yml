@@ -1,10 +1,5 @@
 # https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md
 
-commit-msg:
-  commands:
-    commitlint:
-      run: pnpm commitlint --edit {1}
-
 pre-commit:
   parallel: true
   commands:
