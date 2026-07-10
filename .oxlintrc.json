@@ -1,5 +1,8 @@
 {
   "extends": ["node_modules/@nihalgonsalves/esconfig/.oxlintrc.json"],
+  "rules": {
+    "import/extensions": "off"
+  },
   "overrides": [
     {
       "files": ["**/*.spec.ts"],
