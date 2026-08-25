@@ -34,21 +34,21 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@nihalgonsalves/esconfig": "^0.18.0",
+    "@nihalgonsalves/esconfig": "^0.18.2",
     "@types/debug": "^4.1.13",
     "@types/node": "^22",
-    "@vitest/coverage-v8": "^4.1.10",
-    "@vitest/ui": "^4.1.10",
+    "@vitest/coverage-v8": "^4.1.11",
+    "@vitest/ui": "^4.1.11",
     "browserslist": "^4.28.8",
     "esbuild": "~0.28.2",
     "knip": "^6.32.2",
     "lefthook": "^2.1.10",
-    "oxfmt": "^0.63.0",
-    "oxlint": "^1.78.0",
+    "oxfmt": "^0.64.0",
+    "oxlint": "^1.79.0",
     "oxlint-tsgolint": "^7.0.2001",
     "typescript": "^7.0.2",
-    "vite": "^8.2.1",
-    "vitest": "^4.1.10"
+    "vite": "^8.2.2",
+    "vitest": "^4.1.11"
   },
   "peerDependencies": {
     "browserslist": "^4.28.8",
