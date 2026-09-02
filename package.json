@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "debug": "^4.4.3",
-    "zod": "^4.4.3"
+    "zod": "^4.5.4"
   },
   "devDependencies": {
     "@nihalgonsalves/esconfig": "^0.18.2",
@@ -41,10 +41,10 @@
     "@vitest/ui": "^4.1.11",
     "browserslist": "^4.28.8",
     "esbuild": "~0.28.2",
-    "knip": "^6.32.2",
-    "lefthook": "^2.1.10",
-    "oxfmt": "^0.64.0",
-    "oxlint": "^1.79.0",
+    "knip": "^6.33.0",
+    "lefthook": "^2.1.12",
+    "oxfmt": "^0.65.0",
+    "oxlint": "^1.80.0",
     "oxlint-tsgolint": "^7.0.2001",
     "typescript": "^7.0.2",
     "vite": "^8.2.2",
