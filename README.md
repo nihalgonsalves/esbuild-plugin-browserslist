@@ -13,8 +13,8 @@ npm install --save-dev esbuild-plugin-browserslist esbuild browserslist
 ## Usage
 
 ```ts
-import esbuild from "esbuild";
 import browserslist from "browserslist";
+import esbuild from "esbuild";
 import { esbuildPluginBrowserslist, resolveToEsbuildTarget } from "esbuild-plugin-browserslist";
 
 await esbuild.build({
