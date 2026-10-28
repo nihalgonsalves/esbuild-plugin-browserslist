@@ -36,26 +36,26 @@
   "devDependencies": {
     "@nihalgonsalves/esconfig": "^0.18.2",
     "@types/debug": "^4.1.13",
-    "@types/node": "^22",
+    "@types/node": "^22.20.5",
     "@vitest/coverage-v8": "^5.0.5",
     "@vitest/ui": "^5.0.5",
-    "browserslist": "^4.29.4",
+    "browserslist": "^4.29.5",
     "esbuild": "~0.28.2",
     "knip": "^6.43.0",
     "lefthook": "^2.2.2",
-    "oxfmt": "^0.74.0",
-    "oxlint": "^1.89.0",
+    "oxfmt": "^0.75.0",
+    "oxlint": "^1.90.0",
     "oxlint-tsgolint": "^7.0.2005",
     "typescript": "^7.0.2",
     "vite": "^8.3.5",
     "vitest": "^5.0.5"
   },
   "peerDependencies": {
-    "browserslist": "^4.29.3",
+    "browserslist": "^4.29.5",
     "esbuild": "~0.28.2"
   },
   "engines": {
     "node": "^22.12.0 || >=24.0.0"
   },
-  "packageManager": "pnpm@11.11.0"
+  "packageManager": "pnpm@12.16.1"
 }
