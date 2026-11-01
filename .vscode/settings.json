@@ -1,11 +1,10 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll.oxc": "explicit"
   },
-  "oxc.typeAware": true,
   "yaml.schemas": {
     "node_modules/lefthook/schema.json": ["lefthook.yml", "lefthook-local.yml"]
   }

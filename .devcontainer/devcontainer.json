@@ -1,13 +1,23 @@
 {
   "name": "Node.js",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:26",
   "customizations": {
     "vscode": {
       "extensions": ["oxc.oxc-vscode"]
     }
   },
-  "onCreateCommand": "pnpm install",
+  "mounts": [
+    {
+      "source": "${devcontainerId}-node_modules",
+      "target": "${containerWorkspaceFolder}/node_modules",
+      "type": "volume"
+    },
+    {
+      "source": "devcontainer-pnpm-store",
+      "target": "/pnpm-store",
+      "type": "volume"
+    }
+  ],
+  "onCreateCommand": "sudo chown node:node node_modules /pnpm-store && pnpm config set store-dir /pnpm-store --location=global && pnpm install",
   "remoteUser": "node"
 }
