@@ -41,13 +41,13 @@
     "@vitest/ui": "^5.1.0",
     "browserslist": "^4.29.5",
     "esbuild": "~0.28.2",
-    "knip": "^6.44.2",
+    "knip": "^6.45.0",
     "lefthook": "^2.2.2",
-    "oxfmt": "^0.77.0",
-    "oxlint": "^1.92.0",
+    "oxfmt": "^0.78.0",
+    "oxlint": "^1.93.0",
     "oxlint-tsgolint": "^7.0.2006",
     "typescript": "^7.0.2",
-    "vite": "^8.3.6",
+    "vite": "^8.3.7",
     "vitest": "^5.1.0"
   },
   "peerDependencies": {
